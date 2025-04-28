@@ -1,0 +1,59 @@
+# ========== Unity Generated ==========
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Crash dumps
+*.pidb
+*.suo
+*.user
+*.userprefs
+*.csproj
+*.unityproj
+*.sln
+*.plist
+
+# Asset meta data should be versioned
+!/[Aa]ssets/**/*.meta
+
+# ========== Visual Studio / Rider ==========
+.vscode/
+.vs/
+.idea/
+*.csproj.user
+*.vcxproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ========== OS (Windows, macOS) ==========
+# Windows thumbnail cache
+Thumbs.db
+# macOS folder attributes
+.DS_Store
+.AppleDouble
+.LSOverride
+# macOS Icon?
+Icon?
+# Files that might appear on external disks
+ehthumbs.db
+Desktop.ini
+
+# ========== Package Managers ==========
+# npm / Yarn
+node_modules/
+# NuGet
+*.nupkg
+# JetBrains Rider caches
+.idea/
+
+# ========== Others ==========
+# Build results
+*.apk
+*.aab
+*.unitypackage
