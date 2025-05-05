@@ -1,23 +1,20 @@
 using UnityEngine;
 
-public class EnemyPoolSpawner : MonoBehaviour
+/// <summary>
+/// PoolManager 레지스트리에서 Enemy 프리팹 풀을 꺼내 사용하는 스패너
+/// </summary>
+public class EnemyPoolSpawner : CharacterSpawner
 {
-    [SerializeField] private Enemy enemyPrefab;
-    [SerializeField] private int initialPoolSize = 10;
-    private ObjectPool<Enemy> pool;
+    [Header("Enemy Prefab")]
+    [Tooltip("풀링할 Enemy 프리팹")]
+    public GameObject enemyPrefab;
 
-    void Awake()
+    /// <summary>
+    /// 지정된 Enemy 프리팹을 레지스트리 풀에서 꺼내어 초기 위치에 배치하고 반환
+    /// </summary>
+    public override Character Spawn(Vector3 position)
     {
-        pool = new ObjectPool<Enemy>(enemyPrefab, initialPoolSize, this.transform);
-    }
-
-    public Enemy Spawn(Vector3 pos)
-    {
-        return pool.Get(pos);
-    }
-
-    public void Despawn(Enemy e)
-    {
-        pool.Release(e);
+        // PoolManager의 SpawnFromPool 헬퍼 호출
+        return SpawnFromPool(enemyPrefab, position);
     }
 }

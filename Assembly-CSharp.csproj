@@ -67,16 +67,22 @@
     <Compile Include="Assets\SPUM\Script\Data\SPUM_MatchingList.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\PlayerPoolSpawner.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\ModeFactory.cs" />
+    <Compile Include="Assets\Resources\Scripts\Ingame\CharacterDefinition.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\EnemySpawner.cs" />
+    <Compile Include="Assets\Resources\Scripts\Common\Shared.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Character.cs" />
+    <Compile Include="Assets\Resources\Scripts\Ingame\Building\BuildingStats.cs" />
     <Compile Include="Assets\Resources\Scripts\Common\GameManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\SpawnManager.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerManager.cs" />
+    <Compile Include="Assets\Resources\Scripts\Ingame\Building\IDamageable.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\ICharacterFactory.cs" />
     <Compile Include="Assets\SPUM\Script\Data\SPUM_Prefabs.cs" />
+    <Compile Include="Assets\Resources\Scripts\Ingame\PoolManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\IAttackStrategy.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\PlatformCanvasScaler.cs" />
     <Compile Include="Assets\SPUM\Script\Data\SpumTextureData.cs" />
+    <Compile Include="Assets\Resources\Scripts\Ingame\Stats\CharacterStats.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Enemy.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\CharacterSpawner.cs" />
     <Compile Include="Assets\SPUM\Script\Data\SpritePos.cs" />
@@ -85,6 +91,7 @@
     <Compile Include="Assets\SPUM\Script\Data\SPUM_AnimationData.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerObj.cs" />
     <Compile Include="Assets\SPUM\Script\Data\SpumPackage.cs" />
+    <Compile Include="Assets\Resources\Scripts\Ingame\Building\Building.cs" />
     <Compile Include="Assets\SPUM\Script\Data\SpumAnimationClip.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\AutoAI.cs" />
   </ItemGroup>

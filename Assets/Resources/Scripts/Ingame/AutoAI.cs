@@ -1,30 +1,37 @@
 // AutoAI.cs
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 [RequireComponent(typeof(Collider2D))]
 public class AutoAI : MonoBehaviour
 {
-    [Header("Movement & Attack")]
-    public float moveSpeed = 3f;
-    public float attackRange = 1.5f;
-
     [Header("Detection")]
-    [Tooltip("감지할 레이어 (예: Enemy)")]
+    [Tooltip("감지할 레이어")]
     public LayerMask detectionLayerMask;
 
-    // Trigger Zone Collider는 'Is Trigger' 체크해야 합니다.
     private List<Transform> detectedTargets = new List<Transform>();
 
     [Header("Attack Strategy")]
-    [SerializeField] private AttackStrategySO attackStrategy;
+    public AttackStrategySO attackStrategy;
 
-    [Header("Attack Strategy")]
-    Animator animator;
+    [Tooltip("공격 간 최소 간격(초)")]
+    public float attackCooldown = 1f;
+    private float lastAttackTime = 0f;
+
+    private Character character;
+
+    private void Awake()
+    {
+        // Character 컴포넌트 참조
+        character = GetComponent<Character>();
+    }
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        // 전략 할당 확인
+        if (attackStrategy == null)
+            Debug.LogError("AutoAI: AttackStrategySO 에셋을 할당하세요.");
     }
 
     void Update()
@@ -47,24 +54,43 @@ public class AutoAI : MonoBehaviour
             }
         }
 
+        float range = character.attackRange;
+        bool inRange = (nearest != null && minDist <= range);
+
+        Debug.Log("inRange: " + inRange + "\n nearest: " + nearest + "\n minDist" + minDist);
+
         // 2) 공격 범위 체크 후 공격 또는 이동
-        if (nearest != null && minDist <= attackRange)
+        // 쿨다운 체크
+        if (inRange && Time.time >= lastAttackTime + attackCooldown)
         {
             attackStrategy.Attack(gameObject, nearest.gameObject);
+            lastAttackTime = Time.time;
         }
-        else
+        else if (!inRange)
         {
-            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector2.left * character.moveSpeed * Time.deltaTime);
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        // 적이 붙어 있는 부모 루트에서 Character 컴포넌트 찾기
+        var charComp = other.GetComponentInParent<Character>();
+
+        var dmg = other.GetComponentInParent<IDamageable>();
+
         // 레이어로 적 필터
-        if (((1 << other.gameObject.layer) & detectionLayerMask) != 0)
+        if (charComp != null && ((1 << other.gameObject.layer) & detectionLayerMask) != 0)
         {
+            Debug.Log("병사를 리스트에 추가함");
             detectedTargets.Add(other.transform);
         }
+        else if(dmg != null && ((1 << other.gameObject.layer) & detectionLayerMask) != 0)
+        {
+            Debug.Log("건물을 리스트에 추가함");
+            detectedTargets.Add(other.transform);
+        }
+
     }
 
     void OnTriggerExit2D(Collider2D other)

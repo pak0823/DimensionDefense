@@ -7,22 +7,16 @@ public class Enemy : Character
 {
     private EnemyPoolSpawner spawner;
 
-    public override void Initialize()
+    public override void Initialize(CharacterStats stats)
     {
-        base.Initialize();
+        base.Initialize(stats);
         spawner = FindObjectOfType<EnemyPoolSpawner>();
     }
 
-    void OnDisable()
-    {
-        // 풀에 반환
-        if (spawner != null)
-            spawner.Despawn(this);
-    }
-
     // 예: HP가 0이 되면 Disable
-    public void Die()
+    protected override void Die()
     {
+        //사망 처리 (풀 반환 등)
         gameObject.SetActive(false);
     }
 }

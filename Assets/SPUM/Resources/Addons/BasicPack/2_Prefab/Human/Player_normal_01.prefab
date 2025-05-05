@@ -2754,7 +2754,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5836857197505123814}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
@@ -2762,7 +2762,7 @@ Transform:
   - {fileID: 7292480394622131018}
   - {fileID: 1561030253510316095}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &4193607149966857645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2833,12 +2833,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19161943960e0574b8fa8daefd9c7060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  attackRange: 1.5
   detectionLayerMask:
     serializedVersion: 2
     m_Bits: 64
   attackStrategy: {fileID: 11400000, guid: ce05691a5d90b6d498e660e437d925b5, type: 2}
+  attackCooldown: 1
 --- !u!50 &7044015652938626309
 Rigidbody2D:
   serializedVersion: 4
@@ -2865,7 +2864,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &5847659569308201571
 GameObject:
   m_ObjectHideFlags: 0
