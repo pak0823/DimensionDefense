@@ -18,12 +18,20 @@ public class SpawnManager : MonoBehaviour
     public List<CharacterDefinition> definitions;
 
     [Header("Spawn Settings")]
-    [Tooltip("스폰 위치 Transform")]
+    [Tooltip("스폰 위치 Transform (플레이어)")]
     public Transform playerSpawnPoint;
+    [Tooltip("스폰 위치 Transform (적)")]
     public Transform enemySpawnPoint;
 
+    [Header("AI Settings")]
     [Tooltip("AI 감지용 레이어 마스크")]
     public LayerMask detectionMask;
+
+    [Header("HP Bar Settings")]
+    [Tooltip("HP Bar Prefab (Canvas 하위에 추가)")]
+    public GameObject hpBarPrefab;
+    [Tooltip("HP Bar를 추가할 Canvas Transform")]
+    public Transform uiCanvas;
 
     private void Start()
     {
@@ -31,7 +39,7 @@ public class SpawnManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 랜덤한 CharacterDefinition을 선택해 пул에서 인스턴스를 꺼내고 초기화
+    /// 랜덤한 CharacterDefinition을 선택해 풀에서 인스턴스를 꺼내고 초기화
     /// </summary>
     private void SpawnRandomCharacter()
     {
@@ -62,8 +70,23 @@ public class SpawnManager : MonoBehaviour
         var ai = go.GetComponent<AutoAI>();
         if (ai != null)
         {
-            ai.detectionLayerMask = def.detectionMask;   // definition마다 다른 마스크
+            ai.detectionLayerMask = def.detectionMask;
             ai.attackStrategy = def.attackStrategy;
+        }
+
+        // 5) HP Bar 인스턴스화 및 초기화
+        if (hpBarPrefab != null && uiCanvas != null && character != null)
+        {
+            var hpCtrl = character.GetComponent<HPBarController>();
+            if (hpCtrl == null)
+            {
+                Debug.LogError("SpawnManager: 캐릭터 프리팹에 HPBarController 컴포넌트를 붙여주세요.");
+            }
+            else
+            {
+                // 올바른 Initialize 호출: character, hpBarPrefab, uiCanvas
+                hpCtrl.Initialize(character, hpBarPrefab, uiCanvas);
+            }
         }
     }
 }

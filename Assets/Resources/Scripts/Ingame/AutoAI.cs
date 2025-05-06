@@ -57,7 +57,7 @@ public class AutoAI : MonoBehaviour
         float range = character.attackRange;
         bool inRange = (nearest != null && minDist <= range);
 
-        Debug.Log("inRange: " + inRange + "\n nearest: " + nearest + "\n minDist" + minDist);
+        //Debug.Log("inRange: " + inRange + "\n nearest: " + nearest + "\n minDist" + minDist);
 
         // 2) 공격 범위 체크 후 공격 또는 이동
         // 쿨다운 체크
@@ -82,7 +82,7 @@ public class AutoAI : MonoBehaviour
         // 레이어로 적 필터
         if (charComp != null && ((1 << other.gameObject.layer) & detectionLayerMask) != 0)
         {
-            Debug.Log("병사를 리스트에 추가함");
+            //Debug.Log("병사를 리스트에 추가함");
             detectedTargets.Add(other.transform);
         }
         else if(dmg != null && ((1 << other.gameObject.layer) & detectionLayerMask) != 0)

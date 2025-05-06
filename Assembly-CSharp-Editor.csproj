@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SPUM\Sample\Script\Editor\PlayerManagerEditor.cs" />
+    <Compile Include="Assets\Editor\Copy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

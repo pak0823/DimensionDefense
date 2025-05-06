@@ -342,13 +342,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2472941675193290123}
   - component: {fileID: 555128149485815383}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: SPUM_20240911215639069
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2472941675193290123
 RectTransform:
   m_ObjectHideFlags: 0

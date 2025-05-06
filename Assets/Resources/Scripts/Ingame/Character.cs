@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,17 +15,28 @@ public class Character : MonoBehaviour
     public int attackDamage { get; private set; }
     public float moveSpeed { get; private set; }
     public  float attackRange { get; private set; }
+
+    /// <summary>
+    /// HP가 바뀔 때마다 호출되는 이벤트 (현재 HP 값을 인자로 넘깁니다)
+    /// </summary>
+    public event Action<int> OnHpChanged;
     public virtual void Initialize(CharacterStats stats) 
     {
+        maxHp = stats.maxHp;
         currentHp = stats.maxHp;
         attackDamage = stats.attackDamage;
         moveSpeed = stats.moveSpeed;
         attackRange = stats.attackRange;
+
+        // 초기 HP 상태를 구독자에게 알림
+        OnHpChanged?.Invoke(currentHp);
     }
 
     public void TakeDamage(int amount)
     {
         currentHp -= amount;
+        OnHpChanged?.Invoke(currentHp);
+
         if (currentHp <= 0)
         {
             Die();
@@ -33,7 +45,7 @@ public class Character : MonoBehaviour
 
     protected virtual void Die()
     {
-        // 기본 구현이 필요하면 남기고, 
-        // 아니면 자식에서 override
+        // 기본 사망 처리 (비활성화, 풀 반환 등)
+        gameObject.SetActive(false);
     }
 }

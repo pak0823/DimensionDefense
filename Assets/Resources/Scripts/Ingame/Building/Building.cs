@@ -5,7 +5,8 @@ public class Building : MonoBehaviour, IDamageable
 {
     [Header("Building Stats")]
     public BuildingStats stats;    // 에디터에서 할당
-    private int currentHp;
+    public int currentHp { get; private set; }
+    public event System.Action<int> OnHpChanged;
 
     void Awake()
     {
@@ -18,6 +19,8 @@ public class Building : MonoBehaviour, IDamageable
         Debug.Log($"{name} took {amount} damage, HP = {currentHp}/{stats.maxHp}");
         if (currentHp <= 0)
             DestroyBuilding();
+
+        OnHpChanged?.Invoke(currentHp);
     }
 
     private void DestroyBuilding()

@@ -63,6 +63,8 @@
     <Compile Include="Assets\Resources\Scripts\Ingame\BasicAttack.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Player.cs" />
     <Compile Include="Assets\Resources\Scripts\Common\CameraMove.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\HPBarController.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\HpBar.cs" />
     <Compile Include="Assets\SPUM\Script\Data\PreviewMatchingElement.cs" />
     <Compile Include="Assets\SPUM\Script\Data\SPUM_MatchingList.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\PlayerPoolSpawner.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Assets\Resources\Scripts\Ingame\SpawnManager.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Building\IDamageable.cs" />
+    <Compile Include="Assets\Resources\Scripts\Ingame\Building\BuildingHpBar.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\ICharacterFactory.cs" />
     <Compile Include="Assets\SPUM\Script\Data\SPUM_Prefabs.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\PoolManager.cs" />
