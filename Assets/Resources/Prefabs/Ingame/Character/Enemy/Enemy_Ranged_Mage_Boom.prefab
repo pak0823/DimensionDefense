@@ -3235,7 +3235,7 @@ GameObject:
   - component: {fileID: -6422400718686433642}
   m_Layer: 6
   m_Name: Enemy_Ranged_Mage_Boom
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3344,7 +3344,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   attackStrategy: {fileID: 11400000, guid: ce05691a5d90b6d498e660e437d925b5, type: 2}
-  attackCooldown: 1
 --- !u!114 &5570983533069572851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3370,7 +3369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 508f4e2f9ada73845a538d9804597114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpBarPrefab: {fileID: 7227060064333231910, guid: da65f401c082d254d977ab80bd0eb464, type: 3}
 --- !u!1 &6256023182237157374
 GameObject:
   m_ObjectHideFlags: 0

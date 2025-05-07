@@ -4,12 +4,13 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Stats/CharacterStats")]
 public class CharacterStats : ScriptableObject
 {
-    [Header("Basic HP")]
+    [Header("HP")]
     public int maxHp;
 
     [Header("Offense")]
     public int attackDamage;
     public float attackRange;
+    public float attackCoolTime;
 
     [Header("Movement")]
     public float moveSpeed;

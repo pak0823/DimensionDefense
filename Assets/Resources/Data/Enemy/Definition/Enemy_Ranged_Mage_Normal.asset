@@ -19,7 +19,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isEnemy: 1
-  attackStrategy: {fileID: 11400000, guid: ce05691a5d90b6d498e660e437d925b5, type: 2}
+  attackStrategy: {fileID: 11400000, guid: 14d3e366e9e5e3041b674d62b90a8de0, type: 2}
   statsHighAtk: {fileID: 11400000, guid: 095bb91c6fcc7e3419189079da7cf3ef, type: 2}
   statsHighDef: {fileID: 11400000, guid: 66f092e596671b84f9a88cf842f80033, type: 2}
   statsBalanced: {fileID: 11400000, guid: a46040e5d3662cc4780ce57a44998349, type: 2}

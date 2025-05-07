@@ -15,8 +15,6 @@ public class AutoAI : MonoBehaviour
     [Header("Attack Strategy")]
     public AttackStrategySO attackStrategy;
 
-    [Tooltip("공격 간 최소 간격(초)")]
-    public float attackCooldown = 1f;
     private float lastAttackTime = 0f;
 
     private Character character;
@@ -57,11 +55,9 @@ public class AutoAI : MonoBehaviour
         float range = character.attackRange;
         bool inRange = (nearest != null && minDist <= range);
 
-        //Debug.Log("inRange: " + inRange + "\n nearest: " + nearest + "\n minDist" + minDist);
-
         // 2) 공격 범위 체크 후 공격 또는 이동
         // 쿨다운 체크
-        if (inRange && Time.time >= lastAttackTime + attackCooldown)
+        if (inRange && Time.time >= lastAttackTime + character.attackCoolTime)
         {
             attackStrategy.Attack(gameObject, nearest.gameObject);
             lastAttackTime = Time.time;
