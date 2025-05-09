@@ -154,7 +154,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -165,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.7}
+  m_Size: {x: 0.8, y: 0.7}
   m_EdgeRadius: 0
 --- !u!50 &8062425120693740905
 Rigidbody2D:
@@ -210,7 +210,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackStrategy: {fileID: 11400000, guid: ce05691a5d90b6d498e660e437d925b5, type: 2}
-  attackCooldown: 1
 --- !u!114 &5011054615749684202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1462,7 +1461,7 @@ Transform:
   m_GameObject: {fileID: 3289012920263256222}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7, y: 0.4, z: 0}
+  m_LocalPosition: {x: -0.83, y: 0.163, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1511,7 +1510,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &3584664328128392605
 GameObject:
@@ -3728,7 +3727,7 @@ Transform:
   m_GameObject: {fileID: 7794539611526692987}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3746,7 +3745,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: -799515315
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_SortAtRoot: 0
 --- !u!95 &1812018419514169212
 Animator:
@@ -4242,14 +4241,14 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7110302916456429235}
   - {fileID: 8302745822097081557}
   - {fileID: 902050623076752599}
   m_Father: {fileID: 2817907951003579237}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.285}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7520112457823760859
 MonoBehaviour:
   m_ObjectHideFlags: 0

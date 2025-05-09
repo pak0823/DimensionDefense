@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 50
+  controlID: 11062
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 11063
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   - {fileID: 16}
   - {fileID: 17}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 51
+  controlID: 11087
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -828,9 +828,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 20.434652, y: -4.0403824, z: -0.05569968}
+    m_Target: {x: 1180.4574, y: 328.4629, z: -6.928986}
     speed: 2
-    m_Value: {x: 20.434652, y: -4.0403824, z: -0.05569968}
+    m_Value: {x: 1180.4574, y: 328.4629, z: -6.928986}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -880,9 +880,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.599515
+    m_Target: 809.62683
     speed: 2
-    m_Value: 7.599515
+    m_Value: 809.62683
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -943,7 +943,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -411056
+  m_LastSelectedObjectID: 20384
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -985,14 +985,14 @@ MonoBehaviour:
     - {fileID: -6403110648989934664, guid: 906a82af9ccce91478063bb7e2c10209, type: 2}
     - {fileID: 2439157679452051923, guid: ac88feb80699c2647a73eadb20eee48b, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.83980584
+    - e00: 1.0205598
       e01: 0
       e02: 0
-      e03: 157.767
+      e03: -19.560253
       e10: 0
-      e11: 0.83980584
+      e11: 1.0205598
       e12: 0
-      e13: 486.25244
+      e13: 629.90924
       e20: 0
       e21: 0
       e22: 1
@@ -1033,14 +1033,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 1.068083
+    - e00: 0.91052634
       e01: 0
       e02: 0
-      e03: 12.75177
+      e03: -30.526337
       e10: 0
-      e11: 1.068083
+      e11: 0.91052634
       e12: 0
-      e13: 275.5148
+      e13: 194
       e20: 0
       e21: 0
       e22: 1
@@ -1104,21 +1104,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 527cfaff627cfaff707cfaff767cfaff7c7cfaff847cfaff140cfdff5e22feff643afeff0083feff0483feff0a83feff2683feff7628ffff18fbffffa24f0000ae4f0000
+      m_ExpandedIDs: de42ffffea42fffff642ffff3243ffff8e43ffff7896ffff8296ffff8c96ffff9696ffffa096ffffb496ffffbe96ffffc896ffffce96ffffd296ffffd696ffffda96fffff896ffff0297ffff0897ffff0c97ffff1097ffff1497ffff1897ffff2897ffff5a97ffff6897ffff6c97ffff7a97ffff8897ffff8c97ffff9097ffffa697ffffb097ffffb497ffffb897ffffc297ffffcc97ffffd297ffffdc97ffffe097ffffe697ffffec97fffff497ffff0298ffffc6e6ffff18fbffff884e00008a4f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Player_Melee_Shield(Clone)
-        m_OriginalName: Player_Melee_Shield(Clone)
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -420216
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 10}
       m_SearchString: 
@@ -1207,7 +1207,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefabs/Ingame/Character/Enemy
+    - Assets/Resources
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1215,30 +1215,30 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Prefabs/Ingame/Character/Enemy
+  - Assets/Resources
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ziwoo\Documents\GitHub\Project_B
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ca620000
-    m_LastClickedID: 25290
-    m_ExpandedIDs: 00000000685b00006c5b00006e5b0000705b0000725b0000745b0000765b0000785b00007a5b00007c5b00007e5b0000805b0000825b0000845b0000865b0000885b00008a5b00008c5b00008e5b0000905b0000925b0000945b0000965b0000985b00009a5b0000c8620000e67400007a76000000ca9a3b
+    m_SelectedIDs: 145c0000
+    m_LastClickedID: 23572
+    m_ExpandedIDs: 00000000145c0000165c0000185c00001a5c00001c5c0000205c0000225c0000245c0000265c0000285c00002a5c00002c5c00002e5c0000305c0000325c0000345c0000385c00003c5c0000405c0000166e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Edinnu_UI_asset_pack
+      m_OriginalName: Edinnu_UI_asset_pack
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 23606
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 4
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 12}
     m_SearchString: 
@@ -1252,7 +1252,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000685b00006a5b00006c5b00006e5b0000705b0000725b0000745b0000765b0000785b00007a5b00007c5b00007e5b0000805b0000825b0000845b0000865b0000885b00008a5b00008c5b00008e5b0000905b0000925b0000945b0000965b0000985b00009a5b0000
+    m_ExpandedIDs: 00000000145c0000165c0000185c00001a5c00001c5c0000205c0000225c0000245c0000265c0000285c00002a5c00002c5c00002e5c0000305c0000325c0000345c0000385c00003c5c00003e5c0000405c0000ec630000166e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1279,8 +1279,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 9660000078d2000008d3000000d3000014d30000a4d20000c4d2000088d20000f4d200002c700000cc6d0100c86d0000482a0100e22c01007e2a01003e5b0000525b0000868d0000066d0000046d0000f88b000068590100605601005a560100320e0200140f0200c8720000c072000078f2000060f20000165802006a7300009e7300009873000064e301007e2802009a230200a438020032280200427c00001cbb0000e69200000c9500009c910000bc51010056bb0000b2510100945101009e51010082960000ec120100f8840000ee8000008eb90000c8480100fe70000008580700187400008ad92b006a6d0000d2291100e6120800880f0f009af2050078cb0500d0dd05005670000070550000d4550000e889000076ca0200000000007c660300
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: 9660000078d2000008d3000000d3000014d30000a4d20000c4d2000088d20000f4d200002c700000cc6d0100482a0100e22c01007e2a01003e5b0000525b0000868d0000066d0000046d0000f88b000068590100605601005a560100320e0200140f0200c8720000c072000078f2000060f20000165802006a7300009e7300009873000064e301007e2802009a230200a438020032280200427c00001cbb0000e69200000c9500009c910000bc51010056bb0000b2510100945101009e51010082960000ec120100f8840000ee8000008eb90000c8480100fe70000008580700187400008ad92b006a6d0000d2291100e6120800880f0f009af2050078cb0500d0dd05005670000070550000d4550000e889000076ca02007c6603004450000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

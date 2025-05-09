@@ -82,5 +82,9 @@ public class Character : MonoBehaviour
     {
         // 기본 사망 처리 (비활성화, 풀 반환 등)
         gameObject.SetActive(false);
+
+        // AutoAI들이 자신의 리스트에서 나를 꼭 제거하도록 이벤트 호출
+        foreach (var ai in FindObjectsOfType<AutoAI>())
+            ai.ForceRemoveTarget(this.transform);
     }
 }

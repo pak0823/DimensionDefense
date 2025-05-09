@@ -25,21 +25,11 @@ public class RangedAttack : AttackStrategySO
         if (anim != null) anim.SetTrigger(attackTrigger);
 
         // 1) 투사체 인스턴스화
-        var projGO = Instantiate(
-            projectilePrefab,
-            self.transform.position,
-            Quaternion.identity
-        );
-
-        // 3) Transform 이동 기반 초기화
+        var projGO = Shared.PoolManager.Spawn(projectilePrefab, self.transform.position);
         var proj = projGO.GetComponent<Projectile>();
-        if (proj != null)
-            proj.Initialize(
-                self.GetComponent<Character>().attackDamage,
-                projectileSpeed        // 방향은 내부에서 Vector2.left 고정
-            );
+        proj.Initialize(self.GetComponent<Character>().attackDamage, projectileSpeed);
 
-        // 4) 수명 후 파괴
+        // 2) 수명 후 파괴
         Destroy(projGO, lifeTime);
     }
 }

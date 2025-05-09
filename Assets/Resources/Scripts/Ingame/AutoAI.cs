@@ -18,11 +18,13 @@ public class AutoAI : MonoBehaviour
     private float lastAttackTime = 0f;
 
     private Character character;
+    private Animator animator;
 
     private void Awake()
     {
         // Character 컴포넌트 참조
         character = GetComponent<Character>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Start()
@@ -53,18 +55,23 @@ public class AutoAI : MonoBehaviour
         }
 
         float range = character.attackRange;
-        bool inRange = (nearest != null && minDist <= range);
-
+        bool inRange = (nearest != null );
         // 2) 공격 범위 체크 후 공격 또는 이동
-        // 쿨다운 체크
-        if (inRange && Time.time >= lastAttackTime + character.attackCoolTime)
+
+        if (inRange)
         {
-            attackStrategy.Attack(gameObject, nearest.gameObject);
-            lastAttackTime = Time.time;
+            if(Time.time >= lastAttackTime + character.attackCoolTime)// 쿨다운 체크
+            {
+                attackStrategy.Attack(gameObject, nearest.gameObject);
+                lastAttackTime = Time.time;
+            }
+
+            animator.SetBool("Move", false);
         }
-        else if (!inRange)
+        else
         {
             transform.Translate(Vector2.left * character.moveSpeed * Time.deltaTime);
+            animator.SetBool("Move", true);
         }
     }
 
@@ -94,6 +101,12 @@ public class AutoAI : MonoBehaviour
         if (((1 << other.gameObject.layer) & detectionLayerMask) != 0)
         {
             detectedTargets.Remove(other.transform);
+            Debug.Log("리스트에서 삭제: " + other.name);
         }
+    }
+
+    public void ForceRemoveTarget(Transform t)
+    {
+        detectedTargets.Remove(t);
     }
 }
