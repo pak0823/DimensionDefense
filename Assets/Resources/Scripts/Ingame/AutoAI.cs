@@ -12,7 +12,7 @@ public class AutoAI : MonoBehaviour
 
     private List<Transform> detectedTargets = new List<Transform>();
 
-    [Header("Attack Strategy")]
+    //[Header("Attack Strategy")]
     public AttackStrategySO attackStrategy;
 
     private float lastAttackTime = 0f;

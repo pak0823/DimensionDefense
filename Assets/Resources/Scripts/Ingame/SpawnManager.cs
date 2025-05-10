@@ -72,7 +72,12 @@ public class SpawnManager : MonoBehaviour
         // 3) 스탯 초기화
         var character_player = player_Pool.GetComponent<Character>();
         if (character_player != null)
+        {
             character_player.Initialize(player_Def.GetStats());
+            character_player.Initialize(player_Def);
+        }
+            
+
 
         // 4) AI 설정
         var ai_Player = player_Pool.GetComponent<AutoAI>();
@@ -121,7 +126,11 @@ public class SpawnManager : MonoBehaviour
         // 3) 스탯 초기화
         var character_Enemy = enemy_Pool.GetComponent<Character>();
         if (character_Enemy != null)
+        {
             character_Enemy.Initialize(enemy_Def.GetStats());
+            character_Enemy.Initialize(enemy_Def);
+        }
+            
 
         // 4) AI 설정
         var ai_Enemy = enemy_Pool.GetComponent<AutoAI>();

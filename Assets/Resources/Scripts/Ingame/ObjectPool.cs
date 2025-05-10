@@ -5,7 +5,7 @@ public class ObjectPool<T> where T : Component
 {
     private T prefab;
     private Queue<T> pool = new Queue<T>();
-    private Transform parent;
+    public Transform parent;
 
     public ObjectPool(T prefab, int initialSize, Transform parent = null)
     {

@@ -70,7 +70,6 @@
     <Compile Include="Assets\Resources\Scripts\Ingame\PlayerPoolSpawner.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\ModeFactory.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\CharacterDefinition.cs" />
-    <Compile Include="Assets\Resources\Scripts\Ingame\EnemySpawner.cs" />
     <Compile Include="Assets\Resources\Scripts\Common\Shared.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Character.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Building\BuildingStats.cs" />
@@ -93,6 +92,7 @@
     <Compile Include="Assets\SPUM\Script\Data\SpritePos.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\UI_Ingame.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\ObjectPool.cs" />
+    <Compile Include="Assets\Resources\Scripts\Ingame\EnemyPoolSpawner.cs" />
     <Compile Include="Assets\SPUM\Script\Data\SPUM_AnimationData.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerObj.cs" />
     <Compile Include="Assets\SPUM\Script\Data\SpumPackage.cs" />

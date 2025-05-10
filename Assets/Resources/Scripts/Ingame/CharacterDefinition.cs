@@ -1,47 +1,133 @@
 using UnityEngine;
 
-public enum MeleeVariant { HighAttack, HighDefense, Balanced }
+
+public enum AttackType { Melee, Range}
+public enum MeleeType { None ,Sword, DoubleSword, Axe, DoubleAxe, SwordShield, SpearShield }
+public enum RangeType { None, Arrow, FireBolt, LightningBolt, Boom, Heal, Buffer }
+public enum Rating { Normal, Rare, Unique, Legendary}
 
 [CreateAssetMenu(menuName = "Spawn/CharacterDefinition")]
 public class CharacterDefinition : ScriptableObject
 {
     [Header("기본 정보")]
-    public string typeName;         // ex. "근접_공격형", "근접_방어형" 표시용
+    public string typeName;      // ex. "근접_검사", "원거리_궁수"
 
     [Header("프리팹")]
-    public GameObject prefab;           // 스폰할 프리팹
-
-    [Header("밸런스 프로필")]
-    public MeleeVariant variant;          // 어떤 타입인지 선택
-
-    [Header("감지할 레이어")]
-    public LayerMask detectionMask;     //어떤 레이어를 감지할건지 선택
+    public GameObject prefab;
 
     [Header("스폰 지점 선택")]
     public bool isEnemy;            //타입에 따른 스폰위치 지정
 
+    [Header("공격 유형")]
+    public AttackType attackType;
+
+    [Header("근접 세부 타입 (attackType = Melee 일 때)")]
+    public MeleeType meleeType;
+
+    [Header("원거리 세부 타입 (attackType = Range 일 때)")]
+    public RangeType rangeType;
+
+    [Header("밸런스 프로필")]
+    public Rating rating;
+
     [Header("Attack Strategy")]
     public AttackStrategySO attackStrategy;     //타입에 따른 공격 방식 지정
 
-    [Tooltip("공격형 스탯")]
-    public CharacterStats statsHighAtk;
+    [Header("감지할 레이어")]
+    public LayerMask detectionMask;     //어떤 레이어를 감지할건지 선택
 
-    [Tooltip("방어형 스탯")]
-    public CharacterStats statsHighDef;
+    [Header("배율 (Rating 보정용)")]
+    [Tooltip("Rare 등급에 곱해질 배율")]
+    public float rareMultiplier = 1.2f;
+    [Tooltip("Unique 등급에 곱해질 배율")]
+    public float uniqueMultiplier = 1.5f;
+    [Tooltip("Legendary 등급에 곱해질 배율")]
+    public float legendaryMultiplier = 2.0f;
 
-    [Tooltip("균형형 스탯")]
-    public CharacterStats statsBalanced;
+    [Header("세부 스탯 (AttackType+Subtype)")]
+    public CharacterStats statsMeleeSword;
+    public CharacterStats statsMeleeDoubleSword;
+    public CharacterStats statsMeleeAxe;
+    public CharacterStats statsMeleeDoubleAxe;
+    public CharacterStats statsMeleeSwordShield;
+    public CharacterStats statsMeleeSpearShield;
+
+    public CharacterStats statsRangeArrow;
+    public CharacterStats statsRangeFireBolt;
+    public CharacterStats statsRangeLightningBolt;
+    public CharacterStats statsRangeBoom;
+    public CharacterStats statsRangeHeal;
+    public CharacterStats statsRangeBuffer;
+
+
 
     /// <summary>
-    /// SpawnManager에서 호출할 때, variant에 맞는 stats를 반환
+    /// SpawnManager나 PoolManager에서 호출하여
+    /// AttackType + Subtype 에 따라 올바른 Stats를 돌려줍니다.
     /// </summary>
     public CharacterStats GetStats()
     {
-        switch (variant)
+        // 1) 기본 스탯 선택
+        CharacterStats baseStats;
+        switch (attackType)
         {
-            case MeleeVariant.HighAttack: return statsHighAtk;
-            case MeleeVariant.HighDefense: return statsHighDef;
-            default: return statsBalanced;
+            case AttackType.Melee:
+                switch (meleeType)
+                {
+                    case MeleeType.None: baseStats = statsMeleeSword; break;
+                    case MeleeType.Sword: baseStats = statsMeleeSword; break;
+                    case MeleeType.DoubleSword: baseStats = statsMeleeDoubleSword; break;
+                    case MeleeType.Axe: baseStats = statsMeleeAxe; break;
+                    case MeleeType.DoubleAxe: baseStats = statsMeleeDoubleAxe; break;
+                    case MeleeType.SwordShield: baseStats = statsMeleeSwordShield; break;
+                    case MeleeType.SpearShield: baseStats = statsMeleeSpearShield; break;
+                    default: baseStats = statsMeleeSword; break;
+                }
+                break;
+
+            case AttackType.Range:
+                switch (rangeType)
+                {
+                    case RangeType.None: baseStats = statsRangeArrow; break;
+                    case RangeType.Arrow: baseStats = statsRangeArrow; break;
+                    case RangeType.FireBolt: baseStats = statsRangeFireBolt; break;
+                    case RangeType.LightningBolt: baseStats = statsRangeLightningBolt; break;
+                    case RangeType.Boom: baseStats = statsRangeBoom; break;
+                    case RangeType.Heal: baseStats = statsRangeHeal; break;
+                    case RangeType.Buffer: baseStats = statsRangeBuffer; break;
+                    default: baseStats = statsRangeArrow; break;
+                }
+                break;
+
+            default:
+                baseStats = statsMeleeSword;
+                break;
+        }
+
+        // 2) Rating 배율 계산
+        float multiplier = GetMultiplier();
+
+        // 3) 새 인스턴스 생성 및 보정
+        var stats = ScriptableObject.CreateInstance<CharacterStats>();
+        stats.maxHp = Mathf.RoundToInt(baseStats.maxHp * multiplier);
+        stats.attackDamage = Mathf.RoundToInt(baseStats.attackDamage * multiplier);
+        stats.moveSpeed = baseStats.moveSpeed * multiplier;
+        stats.attackRange = baseStats.attackRange * multiplier;
+
+        return stats;
+    }
+
+    /// <summary>
+    /// Rating에 따른 배율을 반환
+    /// </summary>
+    private float GetMultiplier()
+    {
+        switch (rating)
+        {
+            case Rating.Rare: return rareMultiplier;
+            case Rating.Unique: return uniqueMultiplier;
+            case Rating.Legendary: return legendaryMultiplier;
+            default: return 1f;  // Normal
         }
     }
 }

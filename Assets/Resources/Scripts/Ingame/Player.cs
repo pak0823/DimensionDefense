@@ -12,10 +12,10 @@ public class Player : Character
         spawner = FindObjectOfType<PlayerPoolSpawner>();
     }
 
-    // 예: HP가 0이 되면 Disable
-    protected override void Die()
-    {
-        //사망 처리 (풀 반환 등)
-        gameObject.SetActive(false);
-    }
+    //// 예: HP가 0이 되면 Disable
+    //protected override void Die()
+    //{
+    //    //사망 처리 (풀 반환 등)
+    //    gameObject.SetActive(false);
+    //}
 }

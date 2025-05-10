@@ -375,7 +375,7 @@
 "Assets/Resources/Scripts/Ingame/CharacterDefinition.cs"
 "Assets/Resources/Scripts/Ingame/CharacterSpawner.cs"
 "Assets/Resources/Scripts/Ingame/Enemy.cs"
-"Assets/Resources/Scripts/Ingame/EnemySpawner.cs"
+"Assets/Resources/Scripts/Ingame/EnemyPoolSpawner.cs"
 "Assets/Resources/Scripts/Ingame/IAttackStrategy.cs"
 "Assets/Resources/Scripts/Ingame/ICharacterFactory.cs"
 "Assets/Resources/Scripts/Ingame/ModeFactory.cs"

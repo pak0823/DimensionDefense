@@ -19,15 +19,29 @@ public class Character : MonoBehaviour
     public float attackRange { get; private set; }
     public float attackCoolTime { get; private set; }
     public float moveSpeed { get; private set; }
-    
+
+    // ① 스폰된 원본 Prefab을 저장할 필드
+    public GameObject definitionPrefab { get; private set; }
 
 
 
     public event Action<int> OnHpChanged;   // HP가 바뀔 때마다 호출되는 이벤트 (현재 HP 값을 인자로 넘깁니다)
+    private Animator animator;
 
+    // 기존 Initialize를 오버로드하여 CharacterDefinition까지 받도록
+    public void Initialize(CharacterDefinition def)
+    {
+        // 프리팹 키 저장
+        definitionPrefab = def.prefab;
+
+        // 기존 스탯 초기화 로직 호출
+        Initialize(def.GetStats());
+    }
 
     public virtual void Initialize(CharacterStats stats) 
     {
+        animator = GetComponentInChildren<Animator>();
+
         // 1) 스탯 복사
         maxHp = stats.maxHp;
         currentHp = stats.maxHp;
@@ -50,10 +64,6 @@ public class Character : MonoBehaviour
             var size = boxs.size;
             size.x = attackRange;
             boxs.size = size;
-
-            //var off = boxs.offset;
-            //off.x = attackRange / 2f;
-            //boxs.offset = off;
         }
 
         // 3) 원거리(CircleCollider2D) 동기화
@@ -74,17 +84,23 @@ public class Character : MonoBehaviour
 
         if (currentHp <= 0)
         {
-            Die();
+            StartCoroutine(Die());
         }
     }
 
-    protected virtual void Die()
+    protected virtual IEnumerator Die()
     {
-        // 기본 사망 처리 (비활성화, 풀 반환 등)
-        gameObject.SetActive(false);
-
         // AutoAI들이 자신의 리스트에서 나를 꼭 제거하도록 이벤트 호출
         foreach (var ai in FindObjectsOfType<AutoAI>())
             ai.ForceRemoveTarget(this.transform);
+
+        animator.SetTrigger("Death");
+
+        yield return new WaitForSeconds(1f);
+
+        // 기본 사망 처리 (비활성화, 풀 반환 등)
+        gameObject.SetActive(false);
+
+        
     }
 }
