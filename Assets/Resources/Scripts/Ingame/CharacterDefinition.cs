@@ -2,11 +2,11 @@ using UnityEngine;
 
 
 public enum AttackType { Melee, Range}
-public enum MeleeType { None ,Sword, DoubleSword, Axe, DoubleAxe, SwordShield, SpearShield }
-public enum RangeType { None, Arrow, FireBolt, LightningBolt, Boom, Heal, Buffer }
+public enum MeleeType { None ,Sword, Axe, Spear, DoubleShield, DoubleSword, DoubleAxe, SwordShield, SpearShield, AxeShield }
+public enum RangeType { None, Bow, FireBolt, LightningBolt, Boom, Heal, Buffer }
 public enum Rating { Normal, Rare, Unique, Legendary}
 
-[CreateAssetMenu(menuName = "Spawn/CharacterDefinition")]
+[CreateAssetMenu(menuName = "Definition/CharacterDefinition")]
 public class CharacterDefinition : ScriptableObject
 {
     [Header("기본 정보")]
@@ -46,13 +46,16 @@ public class CharacterDefinition : ScriptableObject
 
     [Header("세부 스탯 (AttackType+Subtype)")]
     public CharacterStats statsMeleeSword;
+    public CharacterStats statsMeleeDoubleShield;
     public CharacterStats statsMeleeDoubleSword;
     public CharacterStats statsMeleeAxe;
     public CharacterStats statsMeleeDoubleAxe;
     public CharacterStats statsMeleeSwordShield;
     public CharacterStats statsMeleeSpearShield;
+    public CharacterStats statsMeleeAxeShield;
+    public CharacterStats statsMeleeSpear;
 
-    public CharacterStats statsRangeArrow;
+    public CharacterStats statsRangeBow;
     public CharacterStats statsRangeFireBolt;
     public CharacterStats statsRangeLightningBolt;
     public CharacterStats statsRangeBoom;
@@ -76,11 +79,16 @@ public class CharacterDefinition : ScriptableObject
                 {
                     case MeleeType.None: baseStats = statsMeleeSword; break;
                     case MeleeType.Sword: baseStats = statsMeleeSword; break;
-                    case MeleeType.DoubleSword: baseStats = statsMeleeDoubleSword; break;
                     case MeleeType.Axe: baseStats = statsMeleeAxe; break;
+                    case MeleeType.Spear: baseStats = statsMeleeSpear; break;
+
+                    case MeleeType.DoubleShield: baseStats = statsMeleeDoubleShield; break;
+                    case MeleeType.DoubleSword: baseStats = statsMeleeDoubleSword; break;
                     case MeleeType.DoubleAxe: baseStats = statsMeleeDoubleAxe; break;
+
                     case MeleeType.SwordShield: baseStats = statsMeleeSwordShield; break;
                     case MeleeType.SpearShield: baseStats = statsMeleeSpearShield; break;
+                    case MeleeType.AxeShield: baseStats = statsMeleeAxeShield; break;
                     default: baseStats = statsMeleeSword; break;
                 }
                 break;
@@ -88,14 +96,14 @@ public class CharacterDefinition : ScriptableObject
             case AttackType.Range:
                 switch (rangeType)
                 {
-                    case RangeType.None: baseStats = statsRangeArrow; break;
-                    case RangeType.Arrow: baseStats = statsRangeArrow; break;
+                    case RangeType.None: baseStats = statsRangeBow; break;
+                    case RangeType.Bow: baseStats = statsRangeBow; break;
                     case RangeType.FireBolt: baseStats = statsRangeFireBolt; break;
                     case RangeType.LightningBolt: baseStats = statsRangeLightningBolt; break;
                     case RangeType.Boom: baseStats = statsRangeBoom; break;
                     case RangeType.Heal: baseStats = statsRangeHeal; break;
                     case RangeType.Buffer: baseStats = statsRangeBuffer; break;
-                    default: baseStats = statsRangeArrow; break;
+                    default: baseStats = statsRangeBow; break;
                 }
                 break;
 
@@ -111,8 +119,9 @@ public class CharacterDefinition : ScriptableObject
         var stats = ScriptableObject.CreateInstance<CharacterStats>();
         stats.maxHp = Mathf.RoundToInt(baseStats.maxHp * multiplier);
         stats.attackDamage = Mathf.RoundToInt(baseStats.attackDamage * multiplier);
-        stats.moveSpeed = baseStats.moveSpeed * multiplier;
-        stats.attackRange = baseStats.attackRange * multiplier;
+        stats.attackCoolTime = baseStats.attackCoolTime;
+        stats.moveSpeed = baseStats.moveSpeed;
+        stats.attackRange = baseStats.attackRange;
 
         return stats;
     }

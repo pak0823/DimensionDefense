@@ -8,17 +8,18 @@ using static UnityEngine.GraphicsBuffer;
 /// <summary>
 /// 모든 캐릭터(플레이어, 적)에 공통적인 스탯 초기화 및 데미지 처리
 /// </summary>
-public class Character : MonoBehaviour
+public class Character : MonoBehaviour, IDamageable
 {
     [Header("Identity")] // 공통 속성·메서드
     public string characterName;
 
-    public int maxHp { get; private set; }
-    public int currentHp { get; private set; }
-    public int attackDamage { get; private set; }
-    public float attackRange { get; private set; }
-    public float attackCoolTime { get; private set; }
-    public float moveSpeed { get; private set; }
+
+    [field: SerializeField] public int maxHp { get; private set; }
+    [field: SerializeField] public int currentHp { get; private set; }
+    [field: SerializeField] public int attackDamage { get; private set; }
+    [field: SerializeField] public float attackRange { get; private set; }
+    [field: SerializeField] public float attackCoolTime { get; private set; }
+    [field: SerializeField] public float moveSpeed { get; private set; }
 
     // ① 스폰된 원본 Prefab을 저장할 필드
     public GameObject definitionPrefab { get; private set; }
@@ -26,11 +27,15 @@ public class Character : MonoBehaviour
 
 
     public event Action<int> OnHpChanged;   // HP가 바뀔 때마다 호출되는 이벤트 (현재 HP 값을 인자로 넘깁니다)
+    public static event Action OnHit;   //피격을 받을 때 호출되는 사운드 이벤트
     private Animator animator;
 
     // 기존 Initialize를 오버로드하여 CharacterDefinition까지 받도록
     public void Initialize(CharacterDefinition def)
     {
+        //이름 저장
+        characterName = def.typeName;
+
         // 프리팹 키 저장
         definitionPrefab = def.prefab;
 
@@ -81,6 +86,7 @@ public class Character : MonoBehaviour
     {
         currentHp -= amount;
         OnHpChanged?.Invoke(currentHp);
+        OnHit?.Invoke();
 
         if (currentHp <= 0)
         {
@@ -96,11 +102,10 @@ public class Character : MonoBehaviour
 
         animator.SetTrigger("Death");
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
 
         // 기본 사망 처리 (비활성화, 풀 반환 등)
-        gameObject.SetActive(false);
-
-        
+        Shared.PoolManager.ReturnCharacter(gameObject);
+        Shared.PoolManager.ReturnProjectile(gameObject);
     }
 }

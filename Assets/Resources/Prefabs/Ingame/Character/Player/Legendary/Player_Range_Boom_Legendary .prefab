@@ -876,7 +876,8 @@ GameObject:
   - component: {fileID: 4301362624995164569}
   - component: {fileID: 8374992428268143619}
   - component: {fileID: 52173031625319257}
-  - component: {fileID: 6104091312186001270}
+  - component: {fileID: 7857826421073884940}
+  - component: {fileID: -4754014844239062318}
   m_Layer: 7
   m_Name: 'Player_Range_Boom_Legendary '
   m_TagString: Player
@@ -972,7 +973,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &52173031625319257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -989,7 +990,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   attackStrategy: {fileID: 0}
---- !u!114 &6104091312186001270
+--- !u!114 &7857826421073884940
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -998,10 +999,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1880616072713439741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfb6b669a8ef044e807d8ee6d137483, type: 3}
+  m_Script: {fileID: 11500000, guid: fe7329acb8a511446ad421b1eed3f15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
+--- !u!114 &-4754014844239062318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880616072713439741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508f4e2f9ada73845a538d9804597114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1937926724161160002
 GameObject:
   m_ObjectHideFlags: 0

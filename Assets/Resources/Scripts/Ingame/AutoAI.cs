@@ -54,10 +54,9 @@ public class AutoAI : MonoBehaviour
             }
         }
 
-        float range = character.attackRange;
-        bool inRange = (nearest != null );
-        // 2) 공격 범위 체크 후 공격 또는 이동
+        bool inRange = (nearest != null);
 
+        // 2) 공격 범위 체크 후 공격 또는 이동
         if (inRange)
         {
             if(Time.time >= lastAttackTime + character.attackCoolTime)// 쿨다운 체크

@@ -3,56 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\characterdefinition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\characterdefinition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\attack\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\attack\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\spawnmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ui\\ui_ingame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\ui_ingame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\poolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\poolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|c:\\users\\ziwoo\\documents\\github\\project_b\\assets\\resources\\scripts\\ingame\\attack\\lightingattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\attack\\lightingattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\autoai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\autoai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\building\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\building\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\attack\\rangedattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|c:\\users\\ziwoo\\documents\\github\\project_b\\assets\\resources\\scripts\\ingame\\attack\\rangedattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\attack\\rangedattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\characterspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\characterspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\attack\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\attack\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\manager\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\manager\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\attack\\meleeattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\attack\\meleeattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\common\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\common\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\common\\sceneflowmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\common\\sceneflowmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\scenetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\scenetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ui\\ui_ingame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ui\\ui_ingame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\common\\shared.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\common\\shared.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\characterdefinition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\characterdefinition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\stats\\characterstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\stats\\characterstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\modefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\modefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\PoolManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Ingame\\PoolManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\SpawnManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Resources\\Scripts\\Ingame\\SpawnManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,164 +78,201 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UI_Ingame.cs",
-              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\UI\\UI_Ingame.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\UI_Ingame.cs",
-              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\UI\\UI_Ingame.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\UI_Ingame.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAApAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "LightingAttack.cs",
+              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\LightingAttack.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\Attack\\LightingAttack.cs",
+              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\LightingAttack.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\Attack\\LightingAttack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T10:15:14.241Z",
+              "WhenOpened": "2025-05-13T16:06:43.131Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
+              "Title": "SceneTest.cs",
+              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\SceneTest.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\SceneTest.cs",
+              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\SceneTest.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\SceneTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T14:32:29.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SceneFlowManager.cs",
+              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Common\\SceneFlowManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Common\\SceneFlowManager.cs",
+              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Common\\SceneFlowManager.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Common\\SceneFlowManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T14:09:00.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Common\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Common\\GameManager.cs",
+              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Common\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Common\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T06:36:51.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SoundManager.cs",
+              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Manager\\SoundManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Manager\\SoundManager.cs",
+              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Manager\\SoundManager.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Manager\\SoundManager.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCMAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T06:23:35.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Shared.cs",
+              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Common\\Shared.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Common\\Shared.cs",
+              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Common\\Shared.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Common\\Shared.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T10:34:08.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "MeleeAttack.cs",
               "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\MeleeAttack.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\Attack\\MeleeAttack.cs",
               "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\MeleeAttack.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\Attack\\MeleeAttack.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAB6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T14:45:54.926Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "RangedAttack.cs",
               "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\RangedAttack.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\Attack\\RangedAttack.cs",
               "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\RangedAttack.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\Attack\\RangedAttack.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowDgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T13:51:58.987Z"
+              "WhenOpened": "2025-05-07T13:51:58.987Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "Projectile.cs",
               "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\Projectile.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\Attack\\Projectile.cs",
               "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\Projectile.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\Attack\\Projectile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwCAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T13:52:33.035Z"
+              "WhenOpened": "2025-05-07T13:52:33.035Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "PoolManager.cs",
               "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\PoolManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\PoolManager.cs",
               "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\PoolManager.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\PoolManager.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAswEEAAABaAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAmwGUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T09:16:28.321Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CharacterSpawner.cs",
-              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\CharacterSpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\CharacterSpawner.cs",
-              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\CharacterSpawner.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\CharacterSpawner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T09:02:35.433Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ModeFactory.cs",
-              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\ModeFactory.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\ModeFactory.cs",
-              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\ModeFactory.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\ModeFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T06:05:33.891Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "CharacterStats.cs",
               "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Stats\\CharacterStats.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\Stats\\CharacterStats.cs",
               "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Stats\\CharacterStats.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\Stats\\CharacterStats.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T04:58:17.742Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
               "Title": "CharacterDefinition.cs",
               "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\CharacterDefinition.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\CharacterDefinition.cs",
-              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\CharacterDefinition.cs*",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\CharacterDefinition.cs*",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAtwEwAAABEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\CharacterDefinition.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\CharacterDefinition.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAowHkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T04:56:14.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T04:56:14.486Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Character.cs",
               "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Character.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\Character.cs",
               "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Character.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\Character.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBsAAABWAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAwwFgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T13:30:56.786Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "AutoAI.cs",
               "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\AutoAI.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\AutoAI.cs",
               "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\AutoAI.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\AutoAI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAgwEAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T14:54:20.709Z"
+              "WhenOpened": "2025-04-30T14:54:20.709Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Building.cs",
-              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Building\\Building.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\Building\\Building.cs",
-              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Building\\Building.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\Building\\Building.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T16:01:44.401Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 15,
               "Title": "SpawnManager.cs",
               "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\SpawnManager.cs",
               "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\SpawnManager.cs",
               "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\SpawnManager.cs",
               "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\SpawnManager.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAwwFUAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAswGQAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T08:38:20.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-01T08:38:20.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UI_Ingame.cs",
+              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\UI\\UI_Ingame.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\UI\\UI_Ingame.cs",
+              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\UI\\UI_Ingame.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\UI\\UI_Ingame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T10:15:14.241Z"
             }
           ]
         }

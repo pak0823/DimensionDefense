@@ -1,10 +1,13 @@
 // BasicAttack.cs
+using System;
 using UnityEngine;
 [CreateAssetMenu(menuName = "AI/BasicAttack")]
 public class MeleeAttack :AttackStrategySO
 {
     [Tooltip("Animator에서 사용할 트리거 이름")]
     public string attackTrigger = "Attack";
+
+    //public static event Action OnAttack;
 
 
     public override void Attack(GameObject self, GameObject target)
@@ -28,6 +31,8 @@ public class MeleeAttack :AttackStrategySO
             BuildingDamaged.TakeDamage(damage);
         else
             Debug.LogWarning($"대상이 없음: characterDamaged = ({characterDamaged}) \n BuildingDamaged = ({BuildingDamaged})");
+
+        //OnAttack?.Invoke();
 
 
         //Debug.Log("공격실행: " + self.name + "맞은 적: " + target.name + "대미지: " + damage);

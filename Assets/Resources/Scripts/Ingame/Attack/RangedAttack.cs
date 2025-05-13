@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "AI/RangedAttack")]
@@ -16,6 +17,8 @@ public class RangedAttack : AttackStrategySO
     [Tooltip("Animator에서 사용할 트리거 이름")]
     public string attackTrigger = "Attack";
 
+    public static event Action OnFireBoltAttack;
+
     public override void Attack(GameObject self, GameObject target)
     {
         if (projectilePrefab == null || target == null) return;
@@ -24,12 +27,28 @@ public class RangedAttack : AttackStrategySO
         var anim = self.GetComponentInChildren<Animator>();
         if (anim != null) anim.SetTrigger(attackTrigger);
 
-        // 1) 투사체 인스턴스화
-        var projGO = Shared.PoolManager.Spawn(projectilePrefab, self.transform.position);
-        var proj = projGO.GetComponent<Projectile>();
-        proj.Initialize(self.GetComponent<Character>().attackDamage, projectileSpeed);
+        // 누가 쏘는지 구분
+        bool isPlayer = self.CompareTag("Player");
+        Vector2 dir = isPlayer ? Vector2.right : Vector2.left;
 
-        // 2) 수명 후 파괴
-        Destroy(projGO, lifeTime);
+        // 풀에서 꺼내기
+        var projGO = Shared.PoolManager.SpawnProjectile(
+            projectilePrefab,
+            self.transform.position
+        );
+
+        // 프로젝타일 초기화
+        var proj = projGO.GetComponent<Projectile>();
+        var dmg = self.GetComponent<Character>().attackDamage;
+        proj?.Initialize(
+            dmg,
+            projectileSpeed,
+            dir,
+            isPlayer,
+            projectilePrefab
+        );
+
+        //공격 사운드 실행
+        OnFireBoltAttack?.Invoke();
     }
 }

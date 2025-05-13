@@ -11,7 +11,7 @@ public abstract class CharacterSpawner : MonoBehaviour
     /// </summary>
     protected Character SpawnFromPool(GameObject prefab, Vector3 position)
     {
-        var go = Shared.PoolManager.Spawn(prefab, position);
+        var go = Shared.PoolManager.SpawnCharacter(prefab, position);
         return go.GetComponent<Character>();
     }
 

@@ -799,6 +799,7 @@ GameObject:
   - component: {fileID: -2545750311739506157}
   - component: {fileID: -9016219427228242450}
   - component: {fileID: 6431648307575311430}
+  - component: {fileID: 1861642166103629222}
   m_Layer: 6
   m_Name: Enemy_Range_LightningBolt_Rare
   m_TagString: Enemy
@@ -894,7 +895,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &-9016219427228242450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,6 +925,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
+  <maxHp>k__BackingField: 0
+  <currentHp>k__BackingField: 0
+  <attackDamage>k__BackingField: 0
+  <attackRange>k__BackingField: 0
+  <attackCoolTime>k__BackingField: 0
+  <moveSpeed>k__BackingField: 0
+--- !u!114 &1861642166103629222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026461799492179603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508f4e2f9ada73845a538d9804597114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2107399227456154203
 GameObject:
   m_ObjectHideFlags: 0
@@ -3370,7 +3389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4399447440034694489}
   - component: {fileID: 2744755030844678046}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

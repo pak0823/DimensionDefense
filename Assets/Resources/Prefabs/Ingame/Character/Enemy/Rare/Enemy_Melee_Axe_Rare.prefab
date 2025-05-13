@@ -1100,7 +1100,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &5218871427050334561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,6 +1130,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
+  <maxHp>k__BackingField: 0
+  <currentHp>k__BackingField: 0
+  <attackDamage>k__BackingField: 0
+  <attackRange>k__BackingField: 0
+  <attackCoolTime>k__BackingField: 0
+  <moveSpeed>k__BackingField: 0
 --- !u!1 &2931759671459622803
 GameObject:
   m_ObjectHideFlags: 0

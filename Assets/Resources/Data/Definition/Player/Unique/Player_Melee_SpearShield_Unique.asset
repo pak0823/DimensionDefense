@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320062174e844a348a612b48f7b3928f, type: 3}
+  m_Name: Player_Melee_SpearShield_Unique
+  m_EditorClassIdentifier: 
+  typeName: SpearShield_Unique
+  prefab: {fileID: 8738902458370966635, guid: 672092d6fae854c9da73ae8124fb85bc, type: 3}
+  isEnemy: 0
+  attackType: 0
+  meleeType: 8
+  rangeType: 0
+  rating: 2
+  attackStrategy: {fileID: 11400000, guid: ce05691a5d90b6d498e660e437d925b5, type: 2}
+  detectionMask:
+    serializedVersion: 2
+    m_Bits: 64
+  rareMultiplier: 1.2
+  uniqueMultiplier: 1.5
+  legendaryMultiplier: 2
+  statsMeleeSword: {fileID: 0}
+  statsMeleeDoubleShield: {fileID: 0}
+  statsMeleeDoubleSword: {fileID: 0}
+  statsMeleeAxe: {fileID: 0}
+  statsMeleeDoubleAxe: {fileID: 0}
+  statsMeleeSwordShield: {fileID: 0}
+  statsMeleeSpearShield: {fileID: 11400000, guid: 9b164ab98f2261040978b605396b063d, type: 2}
+  statsMeleeAxeShield: {fileID: 0}
+  statsMeleeSpear: {fileID: 0}
+  statsRangeBow: {fileID: 0}
+  statsRangeFireBolt: {fileID: 0}
+  statsRangeLightningBolt: {fileID: 0}
+  statsRangeBoom: {fileID: 0}
+  statsRangeHeal: {fileID: 0}
+  statsRangeBuffer: {fileID: 0}

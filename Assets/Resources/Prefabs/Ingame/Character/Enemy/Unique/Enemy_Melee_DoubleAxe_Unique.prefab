@@ -3058,8 +3058,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionLayerMask:
     serializedVersion: 2
-    m_Bits: 128
-  attackStrategy: {fileID: 11400000, guid: ce05691a5d90b6d498e660e437d925b5, type: 2}
+    m_Bits: 0
+  attackStrategy: {fileID: 0}
 --- !u!114 &3610937272991841308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3073,6 +3073,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
+  <maxHp>k__BackingField: 0
+  <currentHp>k__BackingField: 0
+  <attackDamage>k__BackingField: 0
+  <attackRange>k__BackingField: 0
+  <attackCoolTime>k__BackingField: 0
+  <moveSpeed>k__BackingField: 0
 --- !u!114 &1546782962602633107
 MonoBehaviour:
   m_ObjectHideFlags: 0

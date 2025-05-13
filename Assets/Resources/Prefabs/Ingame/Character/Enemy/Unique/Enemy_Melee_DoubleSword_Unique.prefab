@@ -2200,8 +2200,8 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 99460426666149877}
   - {fileID: 4020488448802666826}
+  - {fileID: 99460426666149877}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &4707387432666311588
@@ -2275,7 +2275,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1861256395497951816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2305,6 +2305,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
+  <maxHp>k__BackingField: 0
+  <currentHp>k__BackingField: 0
+  <attackDamage>k__BackingField: 0
+  <attackRange>k__BackingField: 0
+  <attackCoolTime>k__BackingField: 0
+  <moveSpeed>k__BackingField: 0
 --- !u!1 &4983291757369025525
 GameObject:
   m_ObjectHideFlags: 0
@@ -3440,7 +3446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 99460426666149877}
   - component: {fileID: 9042230093504723987}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

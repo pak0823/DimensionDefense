@@ -414,7 +414,8 @@ GameObject:
   - component: {fileID: -501527198868098026}
   - component: {fileID: -1845508922981177835}
   - component: {fileID: 5555666113376807610}
-  - component: {fileID: 7591026157655162097}
+  - component: {fileID: 1607813376556388032}
+  - component: {fileID: 3664359829545908911}
   m_Layer: 7
   m_Name: Player_Melee_SwordShield_Rare_2
   m_TagString: Player
@@ -510,7 +511,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &5555666113376807610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,7 +528,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   attackStrategy: {fileID: 0}
---- !u!114 &7591026157655162097
+--- !u!114 &1607813376556388032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -536,10 +537,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 992518889194338473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfb6b669a8ef044e807d8ee6d137483, type: 3}
+  m_Script: {fileID: 11500000, guid: fe7329acb8a511446ad421b1eed3f15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
+  <maxHp>k__BackingField: 0
+  <currentHp>k__BackingField: 0
+  <attackDamage>k__BackingField: 0
+  <attackRange>k__BackingField: 0
+  <attackCoolTime>k__BackingField: 0
+  <moveSpeed>k__BackingField: 0
+--- !u!114 &3664359829545908911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992518889194338473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508f4e2f9ada73845a538d9804597114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1257461277997187046
 GameObject:
   m_ObjectHideFlags: 0

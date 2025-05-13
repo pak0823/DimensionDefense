@@ -1866,7 +1866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 217624766139199179}
   - component: {fileID: 3560149591561500572}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3254,7 +3254,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &-1234180656610642761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3284,6 +3284,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
+  <maxHp>k__BackingField: 0
+  <currentHp>k__BackingField: 0
+  <attackDamage>k__BackingField: 0
+  <attackRange>k__BackingField: 0
+  <attackCoolTime>k__BackingField: 0
+  <moveSpeed>k__BackingField: 0
 --- !u!1 &6892082526077935431
 GameObject:
   m_ObjectHideFlags: 0

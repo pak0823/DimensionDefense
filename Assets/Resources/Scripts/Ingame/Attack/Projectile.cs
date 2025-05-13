@@ -3,38 +3,61 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class Projectile : MonoBehaviour
 {
+    public GameObject definitionPrefab { get; private set; }  // 키로 사용할 원본 프리팹
     int damage;
     float speed;
+    Vector2 direction;
+    bool isPlayerShot;
+    float lifeTime = 5f;  // 원하는 수명(초)
+
+    SpriteRenderer SpriteRenderer;
 
     /// <summary>
     /// RangedAttack.Initialize() 에서 호출할 초기화 메서드
     /// </summary>
-    public void Initialize(int dmg, float spd)
+    public void Initialize(int dmg, float spd, Vector2 dir, bool isPlayer, GameObject prefab)
     {
         damage = dmg;
         speed = spd;
+        direction = dir.normalized;
+        isPlayerShot = isPlayer;
+        definitionPrefab = prefab;
+        Invoke(nameof(ReturnToPool), lifeTime);
+        SpriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (isPlayerShot)
+            SpriteRenderer.flipX = true;
+        else
+            SpriteRenderer.flipX = false;
+
     }
 
     void Update()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        transform.Translate(direction * speed * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        var building = other.GetComponentInParent<IDamageable>();
-        var character = other.GetComponentInParent<Character>();
-        
-        if (other.CompareTag("Player"))
+        // 플레이어가 쐈다면, 적 태그에만 반응
+        if (isPlayerShot && other.CompareTag("Enemy"))
         {
-            //Debug.Log("name: " + other.name + "\n tag: " + other.tag + "\n Damage: " + damage);
+            var dmgable = other.GetComponentInParent<IDamageable>();
+            dmgable?.TakeDamage(damage);
+            ReturnToPool();
+        }
+        // 적이 쐈다면, 플레이어 태그에만 반응
+        else if (!isPlayerShot && other.CompareTag("Player"))
+        {
+            var dmgable = other.GetComponentInParent<IDamageable>();
+            dmgable?.TakeDamage(damage);
+            ReturnToPool();
+        }
+    }
 
-            if (building != null)
-                building.TakeDamage(damage);
-
-            if (character != null)
-                character.TakeDamage(damage);
-                Destroy(gameObject);
-        } 
+    void ReturnToPool()
+    {
+        CancelInvoke();
+        Shared.PoolManager.ReturnProjectile(gameObject);
     }
 }

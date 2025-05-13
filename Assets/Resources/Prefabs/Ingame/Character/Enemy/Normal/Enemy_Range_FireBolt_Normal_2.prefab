@@ -866,7 +866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6785800003495056268}
   - component: {fileID: 7512459154073783295}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2854,7 +2854,7 @@ Animator:
   m_GameObject: {fileID: 6913413770216751211}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e9358c226bb09e24da9c5f7064768810, type: 2}
+  m_Controller: {fileID: 9100000, guid: ecb87b3dbd7cf0c44a2e00e609fe3db7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3968,8 +3968,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionLayerMask:
     serializedVersion: 2
-    m_Bits: 128
-  attackStrategy: {fileID: 11400000, guid: ce05691a5d90b6d498e660e437d925b5, type: 2}
+    m_Bits: 0
+  attackStrategy: {fileID: 0}
 --- !u!114 &395162468153449491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3983,6 +3983,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
+  <maxHp>k__BackingField: 0
+  <currentHp>k__BackingField: 0
+  <attackDamage>k__BackingField: 0
+  <attackRange>k__BackingField: 0
+  <attackCoolTime>k__BackingField: 0
+  <moveSpeed>k__BackingField: 0
 --- !u!114 &7268001696122156336
 MonoBehaviour:
   m_ObjectHideFlags: 0

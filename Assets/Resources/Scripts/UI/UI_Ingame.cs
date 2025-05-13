@@ -4,8 +4,14 @@ using UnityEngine.UI;
 
 public class UI_Ingame : MonoBehaviour
 {
-    [Header("Button")]
-    public Button spawn_Button;
+    [Header("Buttom")]
+    [Tooltip("생성 트리거용 버튼")]
+    public Button Random_SpawnButton;
+    public Button Special_SpawnButton;
+
+
+
+    public Button enemy_SpawnButton;    //임시 버튼
 
     [Header("Text")]
     public Text timer_Text;
@@ -30,6 +36,16 @@ public class UI_Ingame : MonoBehaviour
 
         // 3) UI에 출력
         timer_Text.text = $"{minutes:00}:{seconds:00}";
+    }
+
+    public void OnBtnRandomSpawn()
+    {
+        Shared.SpawnManager.PlayerRandomSpawn();
+    }
+
+    public void OnBtnEnemySpawn()
+    {
+        Shared.SpawnManager.EnemyRandomSpawn();
     }
 
 
