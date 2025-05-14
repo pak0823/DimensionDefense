@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc72c3969e9767645b881c9886eabd63, type: 3}
+  m_Script: {fileID: 11500000, guid: 4181eb50e8b2fc94a9e91e0a3081ffb6, type: 3}
   m_Name: LightningAttack
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1688448807676915914, guid: 8f4f2ffcdfd2a3946a3008d1c5d9cc39, type: 3}
-  projectileSpeed: 0
-  lifeTime: 1.5
+  lifeTime: 0.8
   attackTrigger: Attack

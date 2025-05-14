@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 3593883055028549927, guid: 3ebde3d82a69a1d4c829f8618640e777, type: 3}
   projectileSpeed: 8
-  lifeTime: 1
+  lifeTime: 2
   attackTrigger: Attack

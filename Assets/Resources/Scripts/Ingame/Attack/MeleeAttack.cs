@@ -1,7 +1,7 @@
 // BasicAttack.cs
 using System;
 using UnityEngine;
-[CreateAssetMenu(menuName = "AI/BasicAttack")]
+[CreateAssetMenu(menuName = "AttackStrategy/BasicAttack")]
 public class MeleeAttack :AttackStrategySO
 {
     [Tooltip("Animator에서 사용할 트리거 이름")]

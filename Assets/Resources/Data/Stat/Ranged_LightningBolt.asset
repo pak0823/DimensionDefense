@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ranged_LightningBolt
   m_EditorClassIdentifier: 
   maxHp: 250
-  attackDamage: 50
-  attackRange: 8
-  attackCoolTime: 3
-  moveSpeed: 2.3
+  attackDamage: 35
+  attackRange: 9
+  attackCoolTime: 4
+  moveSpeed: 2.5

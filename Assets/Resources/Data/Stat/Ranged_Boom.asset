@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc85aa57bfe88864382fe8fe996ae776, type: 3}
   m_Name: Ranged_Boom
   m_EditorClassIdentifier: 
-  maxHp: 250
-  attackDamage: 40
-  attackRange: 7
-  attackCoolTime: 2.8
-  moveSpeed: 2.3
+  maxHp: 300
+  attackDamage: 50
+  attackRange: 10
+  attackCoolTime: 7
+  moveSpeed: 2.5

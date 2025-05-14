@@ -45,15 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: InGame_BGM
-    clip: {fileID: 8300000, guid: e42bfe38f3d8f10418320a38ec88e685, type: 3}
-    volume: 0.1
+  - name: Title_BGM
+    clip: {fileID: 8300000, guid: a32f1caa66ca5254897081263338bf91, type: 3}
+    volume: 0.05
     loop: 1
     category: 0
     source: {fileID: 0}
-  - name: Title_BGM
-    clip: {fileID: 8300000, guid: a32f1caa66ca5254897081263338bf91, type: 3}
-    volume: 0.1
+  - name: InGame_BGM
+    clip: {fileID: 8300000, guid: e42bfe38f3d8f10418320a38ec88e685, type: 3}
+    volume: 0.05
     loop: 1
     category: 0
     source: {fileID: 0}
@@ -65,6 +65,24 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: FireBolt_SFX
     clip: {fileID: 8300000, guid: bcfee9a8c2bee8c4584c072820252e01, type: 3}
+    volume: 0.1
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: Arrow_SFX
+    clip: {fileID: 8300000, guid: 010af1708bd6d40439ed9d899b3b6769, type: 3}
+    volume: 1
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: Lightning_SFX
+    clip: {fileID: 8300000, guid: 6038890e8a07d494499f8e3e9a7b305e, type: 3}
+    volume: 0.2
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: Boom_SFX
+    clip: {fileID: 8300000, guid: 13dcc65cb0416704cac8382066da1bdb, type: 3}
     volume: 0.1
     loop: 0
     category: 1

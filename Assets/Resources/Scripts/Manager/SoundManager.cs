@@ -18,6 +18,9 @@ public class SoundManager : MonoBehaviour
             Shared.SoundManager = this;
             DontDestroyOnLoad(gameObject);
             InitializeSounds();
+
+            BGMMasterVolume = PlayerPrefs.GetFloat("BGMMasterVolume", BGMMasterVolume);
+            SFXMasterVolume = PlayerPrefs.GetFloat("SFXMasterVolume", SFXMasterVolume);
         }
         else
         {
@@ -27,14 +30,21 @@ public class SoundManager : MonoBehaviour
 
     private void OnEnable()
     {
-        RangedAttack.OnFireBoltAttack += HandleFireBolt;
         Character.OnHit += HandleHit;
+        ProjectileAttack.OnFireBoltAttack += HandleFireBolt;
+        ProjectileAttack.OnArrowAttack += HandleArrow;
+        RangeAttack.OnLightiningAttack += HandleLightning;
+        RangeAttack.OnBoomAttack += HandleBoom;
     }
 
     private void OnDisable()
     {
-        RangedAttack.OnFireBoltAttack += HandleFireBolt;
         Character.OnHit -= HandleHit;
+        ProjectileAttack.OnFireBoltAttack -= HandleFireBolt;
+        ProjectileAttack.OnArrowAttack -= HandleArrow;
+        RangeAttack.OnLightiningAttack -= HandleLightning;
+        RangeAttack.OnBoomAttack -= HandleBoom;
+
     }
 
     private void InitializeSounds()
@@ -51,25 +61,37 @@ public class SoundManager : MonoBehaviour
         }
 
         // apply initial volumes
-        ApplyAllVolumes();
+        //ApplyAllVolumes();
     }
 
-    private void ApplyAllVolumes()
-    {
-        foreach (var sound in sounds)
-        {
-            float master = sound.category == SoundCategory.BGM ? BGMMasterVolume : SFXMasterVolume;
-            sound.source.volume = sound.volume * master;
-        }
-    }
+    //private void ApplyAllVolumes()
+    //{
+    //    foreach (var sound in sounds)
+    //    {
+    //        float master = sound.category == SoundCategory.BGM ? BGMMasterVolume : SFXMasterVolume;
+    //        sound.source.volume = sound.volume * master;
+    //    }
+    //}
 
     private void HandleHit()
     {
-        PlaySound("Hit_SFX");
+        PlaySoundDelayed("Hit_SFX",0.1f);
     }
     private void HandleFireBolt()
     {
-        PlaySound("FireBolt_SFX");
+        PlaySoundDelayed("FireBolt_SFX",0.1f);
+    }
+    private void HandleArrow()
+    {
+        PlaySoundDelayed("Arrow_SFX",0.1f);
+    }
+    private void HandleLightning()
+    {
+        PlaySoundDelayed("Lightning_SFX",0.2f);
+    }
+    private void HandleBoom()
+    {
+        PlaySoundDelayed("Boom_SFX",0.5f);
     }
 
 
@@ -84,6 +106,14 @@ public class SoundManager : MonoBehaviour
             Debug.LogWarning($"SoundManager: Sound '{_name}' not found!");
         }
     }
+    public void PlaySoundDelayed(string name, float delay)
+    {
+        if (TryGetSound(name, out var s))
+        {
+            // AudioSettings.dspTime 기반으로 딜레이 재생
+            s.source.PlayDelayed(delay);
+        }
+    }
     public void StopSound(string _name)
     {
         if (soundDictionary.TryGetValue(_name, out SoundData sound))
@@ -95,45 +125,27 @@ public class SoundManager : MonoBehaviour
             Debug.LogWarning($"SoundManager: Sound '{_name}' not found!");
         }
     }
-    public void PauseSound(string _name)
-    {
-        if (soundDictionary.TryGetValue(_name, out SoundData sound))
-        {
-            sound.source.Pause();
-        }
-        else
-        {
-            Debug.LogWarning($"SoundManager: Sound '{_name}' not found!");
-        }
-    }
-    public void ResumeSound(string _name)
-    {
-        if (soundDictionary.TryGetValue(_name, out SoundData sound))
-        {
-            sound.source.UnPause();
-        }
-        else
-        {
-            Debug.LogWarning($"SoundManager: Sound '{_name}' not found!");
-        }
-    }
     public void SetMasterBGMVolume(float volume)
     {
         BGMMasterVolume = Mathf.Clamp01(volume);
+        PlayerPrefs.SetFloat("BGMMasterVolume", BGMMasterVolume);
+        PlayerPrefs.Save();
         foreach (var sound in sounds)
         {
             if (sound.category == SoundCategory.BGM)
                 sound.source.volume = sound.volume * BGMMasterVolume;
         }
     }
-
-    /// <summary> Set overall master volume for all SFX (0-1). </summary>
-    public void SetVolume(string name, float volume)
+    public void SetMasterSFXVolume(float volume)
     {
-        if (!TryGetSound(name, out var s)) return;
-        s.volume = Mathf.Clamp01(volume);
-        float master = s.category == SoundCategory.BGM ? BGMMasterVolume : SFXMasterVolume;
-        s.source.volume = s.volume * master;
+        SFXMasterVolume = Mathf.Clamp01(volume);
+        PlayerPrefs.SetFloat("SFXMasterVolume", SFXMasterVolume);
+        PlayerPrefs.Save();
+        foreach (var sound in sounds)
+        {
+            if (sound.category == SoundCategory.SFX)
+                sound.source.volume = sound.volume * SFXMasterVolume;
+        }
     }
     public void StopAllInCategory(SoundCategory _category)
     {

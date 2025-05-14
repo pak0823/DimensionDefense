@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ranged_Bow
   m_EditorClassIdentifier: 
   maxHp: 180
-  attackDamage: 20
-  attackRange: 9
+  attackDamage: 35
+  attackRange: 10
   attackCoolTime: 1.3
   moveSpeed: 2.5

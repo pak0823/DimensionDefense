@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
+using static UnityEngine.GraphicsBuffer;
 
 [RequireComponent(typeof(Collider2D))]
 public class AutoAI : MonoBehaviour

@@ -8,21 +8,20 @@ public class Projectile : MonoBehaviour
     float speed;
     Vector2 direction;
     bool isPlayerShot;
-    float lifeTime = 5f;  // 원하는 수명(초)
 
     SpriteRenderer SpriteRenderer;
 
     /// <summary>
     /// RangedAttack.Initialize() 에서 호출할 초기화 메서드
     /// </summary>
-    public void Initialize(int dmg, float spd, Vector2 dir, bool isPlayer, GameObject prefab)
+    public void Initialize(int dmg, float spd, Vector2 dir, bool isPlayer, float lifetime, GameObject prefab)
     {
         damage = dmg;
         speed = spd;
         direction = dir.normalized;
         isPlayerShot = isPlayer;
         definitionPrefab = prefab;
-        Invoke(nameof(ReturnToPool), lifeTime);
+        Invoke(nameof(ReturnToPool), lifetime);
         SpriteRenderer = GetComponent<SpriteRenderer>();
 
         if (isPlayerShot)

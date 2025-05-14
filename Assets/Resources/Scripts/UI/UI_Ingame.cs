@@ -1,14 +1,27 @@
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UI_Ingame : MonoBehaviour
 {
     [Header("Buttom")]
-    [Tooltip("생성 트리거용 버튼")]
-    public Button Random_SpawnButton;
-    public Button Special_SpawnButton;
+    public Button RandomSpawn_Button;
+    public Button SpecialSpawn_Button;
+    public Button Menu_Button;
+    public Button Save_Button;
 
+    [Header("Panel")]
+    public GameObject Menu_Panel;
+    public GameObject Option_Window;
+
+    [Header("Slider")]
+    public Slider bgmSlider;
+    public Slider sfxSlider;
+
+
+    bool isShowWindow = false;
+    bool isShowPanel = false;
 
 
     public Button enemy_SpawnButton;    //임시 버튼
@@ -23,6 +36,14 @@ public class UI_Ingame : MonoBehaviour
         elapsedTime = 0f;
         if (timer_Text == null)
             timer_Text = GetComponent<Text>();
+
+        // 1) 현재 마스터 볼륨을 슬라이더에 반영
+        bgmSlider.value = Shared.SoundManager.BGMMasterVolume;
+        sfxSlider.value = Shared.SoundManager.SFXMasterVolume;
+
+        // 2) 슬라이더 값이 바뀔 때마다 호출되도록 리스너 등록
+        bgmSlider.onValueChanged.AddListener(Shared.SoundManager.SetMasterBGMVolume);
+        sfxSlider.onValueChanged.AddListener(Shared.SoundManager.SetMasterSFXVolume);
     }
 
     private void Update()
@@ -38,6 +59,44 @@ public class UI_Ingame : MonoBehaviour
         timer_Text.text = $"{minutes:00}:{seconds:00}";
     }
 
+    bool IsShowPanel()
+    {
+        if (isShowPanel)
+        {
+            isShowPanel = false;
+            Time.timeScale = 1f;
+        }
+        else
+        {
+            isShowPanel = true;
+            Time.timeScale = 0f;
+        }
+            
+        return isShowPanel;
+    }
+    public void ShowPanel()
+    {
+        Menu_Panel.SetActive(IsShowPanel());
+    }
+
+    bool IsShowWindow()
+    {
+        if (isShowWindow)
+        {
+            isShowWindow = false;
+        }
+        else
+        {
+            isShowWindow = true;
+        }
+
+        return isShowWindow;
+    }
+    public void ShowWindow()
+    {
+        Option_Window.SetActive(IsShowWindow());
+    }
+
     public void OnBtnRandomSpawn()
     {
         Shared.SpawnManager.PlayerRandomSpawn();
@@ -48,11 +107,27 @@ public class UI_Ingame : MonoBehaviour
         Shared.SpawnManager.EnemyRandomSpawn();
     }
 
-
-    public void ResetTimer()    //필요 시 호출
+    public void OnBtnExit()
     {
-        elapsedTime = 0f;
+        // 빌드된 앱에서는 이 코드로 종료
+        //Application.Quit();
+
+        // 에디터에서는 플레이 모드만 멈추도록
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#endif
     }
+
+    public void OnBtnSaveOption()
+    {
+        ShowWindow();
+    }
+
+
+    //public void ResetTimer()    //필요 시 호출
+    //{
+    //    elapsedTime = 0f;
+    //}
 
 
 }

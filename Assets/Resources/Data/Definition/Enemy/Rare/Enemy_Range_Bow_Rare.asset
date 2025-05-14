@@ -17,9 +17,9 @@ MonoBehaviour:
   isEnemy: 1
   attackType: 1
   meleeType: 0
-  rangeType: 0
+  rangeType: 1
   rating: 1
-  attackStrategy: {fileID: 11400000, guid: 14d3e366e9e5e3041b674d62b90a8de0, type: 2}
+  attackStrategy: {fileID: 11400000, guid: 5b0d3f12a3c28314fbe096c11cc0b102, type: 2}
   detectionMask:
     serializedVersion: 2
     m_Bits: 128

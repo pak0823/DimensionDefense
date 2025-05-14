@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320062174e844a348a612b48f7b3928f, type: 3}
+  m_Name: Enemy_Range_Boom_Legendary
+  m_EditorClassIdentifier: 
+  typeName: Boom_Unique
+  prefab: {fileID: 7343181494619758298, guid: 6c78cae001f734c67b1c2cf4d74c89e2, type: 3}
+  isEnemy: 1
+  attackType: 1
+  meleeType: 0
+  rangeType: 4
+  rating: 3
+  attackStrategy: {fileID: 11400000, guid: 14d3e366e9e5e3041b674d62b90a8de0, type: 2}
+  detectionMask:
+    serializedVersion: 2
+    m_Bits: 128
+  rareMultiplier: 1.2
+  uniqueMultiplier: 1.5
+  legendaryMultiplier: 2
+  statsMeleeSword: {fileID: 0}
+  statsMeleeDoubleShield: {fileID: 0}
+  statsMeleeDoubleSword: {fileID: 0}
+  statsMeleeAxe: {fileID: 0}
+  statsMeleeDoubleAxe: {fileID: 0}
+  statsMeleeSwordShield: {fileID: 0}
+  statsMeleeSpearShield: {fileID: 0}
+  statsMeleeAxeShield: {fileID: 0}
+  statsMeleeSpear: {fileID: 0}
+  statsRangeBow: {fileID: 0}
+  statsRangeFireBolt: {fileID: 0}
+  statsRangeLightningBolt: {fileID: 0}
+  statsRangeBoom: {fileID: 11400000, guid: 586ff69c003dbbc4392602bfaa3ea089, type: 2}
+  statsRangeHeal: {fileID: 0}
+  statsRangeBuffer: {fileID: 0}
