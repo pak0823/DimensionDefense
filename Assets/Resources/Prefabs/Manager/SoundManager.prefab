@@ -75,15 +75,15 @@ MonoBehaviour:
     loop: 0
     category: 1
     source: {fileID: 0}
-  - name: Lightning_SFX
-    clip: {fileID: 8300000, guid: 6038890e8a07d494499f8e3e9a7b305e, type: 3}
-    volume: 0.2
+  - name: SpawnBtn_SFX
+    clip: {fileID: 8300000, guid: b2bc62c76ce861647a73e7d5d78c5dea, type: 3}
+    volume: 1
     loop: 0
     category: 1
     source: {fileID: 0}
-  - name: Boom_SFX
-    clip: {fileID: 8300000, guid: 13dcc65cb0416704cac8382066da1bdb, type: 3}
-    volume: 0.1
+  - name: TitleBtn_SFX
+    clip: {fileID: 8300000, guid: f9ecd002b3a9d6345a7ccefe5850bdef, type: 3}
+    volume: 1
     loop: 0
     category: 1
     source: {fileID: 0}

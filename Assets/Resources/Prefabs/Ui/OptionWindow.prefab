@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 1674832775852500858}
   - component: {fileID: 3812111950874563145}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 2401151992255834068}
   - component: {fileID: 5598185669634873457}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 1788478387403398871}
   - component: {fileID: 6388888861819315471}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SFX_Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -940,6 +940,7 @@ GameObject:
   - component: {fileID: 4008720129133086349}
   - component: {fileID: 6320240016712990117}
   - component: {fileID: 1898152977514147386}
+  - component: {fileID: 625353556759869849}
   m_Layer: 5
   m_Name: OptionWindow
   m_TagString: Untagged
@@ -1008,6 +1009,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &625353556759869849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8010646098271674203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d655867d6426f6468a5bd1e161e2854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmSlider: {fileID: 2860952562362109366}
+  sfxSlider: {fileID: 6388888861819315471}
 --- !u!1 &8393524267092877125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,7 +1034,7 @@ GameObject:
   - component: {fileID: 7659455452533166159}
   - component: {fileID: 2860952562362109366}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: BGM_Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

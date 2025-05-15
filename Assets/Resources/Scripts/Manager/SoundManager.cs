@@ -17,10 +17,11 @@ public class SoundManager : MonoBehaviour
         {
             Shared.SoundManager = this;
             DontDestroyOnLoad(gameObject);
-            InitializeSounds();
-
+            
             BGMMasterVolume = PlayerPrefs.GetFloat("BGMMasterVolume", BGMMasterVolume);
             SFXMasterVolume = PlayerPrefs.GetFloat("SFXMasterVolume", SFXMasterVolume);
+
+            InitializeSounds();
         }
         else
         {
@@ -60,18 +61,19 @@ public class SoundManager : MonoBehaviour
             soundDictionary[sound.name] = sound;
         }
 
-        // apply initial volumes
-        //ApplyAllVolumes();
+        ApplyAllVolumes();
     }
 
-    //private void ApplyAllVolumes()
-    //{
-    //    foreach (var sound in sounds)
-    //    {
-    //        float master = sound.category == SoundCategory.BGM ? BGMMasterVolume : SFXMasterVolume;
-    //        sound.source.volume = sound.volume * master;
-    //    }
-    //}
+    private void ApplyAllVolumes()
+    {
+        foreach (var s in sounds)
+        {
+            float master = (s.category == SoundCategory.BGM)
+                ? BGMMasterVolume
+                : SFXMasterVolume;
+            s.source.volume = s.volume * master;
+        }
+    }
 
     private void HandleHit()
     {

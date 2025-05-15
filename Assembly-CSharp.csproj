@@ -73,6 +73,7 @@
     <Compile Include="Assets\Resources\Scripts\Ingame\CharacterDefinition.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Attack\RangeAttack.cs" />
     <Compile Include="Assets\Resources\Scripts\Common\Shared.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\UI_Title.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Character.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Building\BuildingStats.cs" />
     <Compile Include="Assets\Resources\Scripts\Common\GameManager.cs" />
@@ -91,7 +92,8 @@
     <Compile Include="Assets\Resources\Scripts\Ingame\Stats\CharacterStats.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Enemy.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\CharacterSpawner.cs" />
-    <Compile Include="Assets\Resources\Scripts\SceneTest.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\AudioSetting.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\PulsingScale.cs" />
     <Compile Include="Assets\SPUM\Script\Data\SpritePos.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\UI_Ingame.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\ObjectPool.cs" />

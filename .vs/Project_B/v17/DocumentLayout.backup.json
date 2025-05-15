@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|c:\\users\\ziwoo\\documents\\github\\project_b\\assets\\resources\\scripts\\ingame\\attack\\projectileattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\attack\\projectileattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|c:\\users\\ziwoo\\documents\\github\\project_b\\assets\\resources\\scripts\\ingame\\attack\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\attack\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\attack\\range.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\attack\\range.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\ingame\\attack\\rangeattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\ingame\\attack\\rangeattack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|c:\\users\\ziwoo\\documents\\github\\project_b\\assets\\resources\\scripts\\manager\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\manager\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\assets\\resources\\scripts\\manager\\poolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\manager\\poolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|c:\\users\\ziwoo\\documents\\github\\project_b\\assets\\resources\\scripts\\common\\sceneflowmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{079D3FB2-135C-2665-44AC-92E6FAA1BE88}|Assembly-CSharp.csproj|solutionrelative:assets\\resources\\scripts\\common\\sceneflowmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SoundManager.cs",
-              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Manager\\SoundManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Manager\\SoundManager.cs",
-              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Manager\\SoundManager.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Manager\\SoundManager.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAMwFgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:15:52.602Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Projectile.cs",
-              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\Projectile.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\Attack\\Projectile.cs",
-              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\Projectile.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\Attack\\Projectile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:52:07.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProjectileAttack.cs",
-              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\ProjectileAttack.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\Attack\\ProjectileAttack.cs",
-              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\ProjectileAttack.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\Attack\\ProjectileAttack.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAcAAAAAAAAAA==",
+              "Title": "SceneFlowManager.cs",
+              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Common\\SceneFlowManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Common\\SceneFlowManager.cs",
+              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Common\\SceneFlowManager.cs",
+              "RelativeToolTip": "Assets\\Resources\\Scripts\\Common\\SceneFlowManager.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowC8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:47:27.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RangeAttack.cs",
-              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\RangeAttack.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\Attack\\RangeAttack.cs",
-              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\RangeAttack.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\Attack\\RangeAttack.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAkAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:08:53.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Range.cs",
-              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\Range.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Ingame\\Attack\\Range.cs",
-              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Ingame\\Attack\\Range.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Ingame\\Attack\\Range.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T07:45:57.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PoolManager.cs",
-              "DocumentMoniker": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Manager\\PoolManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Resources\\Scripts\\Manager\\PoolManager.cs",
-              "ToolTip": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Assets\\Resources\\Scripts\\Manager\\PoolManager.cs",
-              "RelativeToolTip": "Assets\\Resources\\Scripts\\Manager\\PoolManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ4AAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:04:07.738Z",
+              "WhenOpened": "2025-05-15T17:05:49.493Z",
               "EditorCaption": ""
             }
           ]

@@ -4,6 +4,8 @@ using System.Collections;
 
 public class SceneFlowManager : MonoBehaviour
 {
+    [SerializeField] private CanvasGroup fadeCanvasGroup;
+
     private void Awake()
     {
         if (Shared.SceneFlowManager == null)
@@ -11,6 +13,13 @@ public class SceneFlowManager : MonoBehaviour
             Shared.SceneFlowManager = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
+
+            // 초기 화면에서는 화면을 가린 상태로 시작
+            if (fadeCanvasGroup != null)
+            {
+                fadeCanvasGroup.alpha = 1f;
+                fadeCanvasGroup.blocksRaycasts = true;
+            }
         }
         else
         {
@@ -34,23 +43,40 @@ public class SceneFlowManager : MonoBehaviour
         switch (scene.name)
         {
             case "TitleScene":
-                // 화면 페이드 인
                 StartCoroutine(FadeIn(1f));
-                // 타이틀 BGM
                 Shared.SoundManager.PlaySound("Title_BGM");
                 break;
-            case "SampleScene":
-                // 인게임 BGM
+            case "IngameScene":
+                StartCoroutine(FadeIn(1f));
                 Shared.SoundManager.PlaySound("InGame_BGM");
                 break;
         }
     }
-
-    // 예: 페이드 인 구현
     private IEnumerator FadeIn(float _duration)
     {
-        // (여기에 화면 페이드 로직)
-        yield return new WaitForSeconds(_duration);
+        if (fadeCanvasGroup == null) yield break;
+        float elapsed = 0f;
+        while (elapsed < _duration)
+        {
+            elapsed += Time.deltaTime;
+            fadeCanvasGroup.alpha = 1f - Mathf.Clamp01(elapsed / _duration);
+            yield return null;
+        }
+        fadeCanvasGroup.alpha = 0f;
+        fadeCanvasGroup.blocksRaycasts = false;
+    }
+    private IEnumerator FadeOut(float _duration)
+    {
+        if (fadeCanvasGroup == null) yield break;
+        fadeCanvasGroup.blocksRaycasts = true;
+        float elapsed = 0f;
+        while (elapsed < _duration)
+        {
+            elapsed += Time.deltaTime;
+            fadeCanvasGroup.alpha = Mathf.Clamp01(elapsed / _duration);
+            yield return null;
+        }
+        fadeCanvasGroup.alpha = 1f;
     }
 
     /// <summary>
@@ -60,12 +86,12 @@ public class SceneFlowManager : MonoBehaviour
     public void ChangeScene(string _sceneName)
     {
         // 페이드 아웃 애니메이션 실행 후 로드
-        StartCoroutine(DoSceneChange(_sceneName, 0.5f));
+        StartCoroutine(DoSceneChange(_sceneName, 2f));
     }
 
     private IEnumerator DoSceneChange(string _sceneName, float _fadeDuration)
     {
-        // (여기에 화면 페이드 아웃 로직)
+        StartCoroutine(FadeOut(_fadeDuration));
         yield return new WaitForSeconds(_fadeDuration);
         SceneManager.LoadScene(_sceneName);
     }

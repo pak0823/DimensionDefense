@@ -15,10 +15,6 @@ public class UI_Ingame : MonoBehaviour
     public GameObject Menu_Panel;
     public GameObject Option_Window;
 
-    [Header("Slider")]
-    public Slider bgmSlider;
-    public Slider sfxSlider;
-
 
     bool isShowWindow = false;
     bool isShowPanel = false;
@@ -36,14 +32,6 @@ public class UI_Ingame : MonoBehaviour
         elapsedTime = 0f;
         if (timer_Text == null)
             timer_Text = GetComponent<Text>();
-
-        // 1) 현재 마스터 볼륨을 슬라이더에 반영
-        bgmSlider.value = Shared.SoundManager.BGMMasterVolume;
-        sfxSlider.value = Shared.SoundManager.SFXMasterVolume;
-
-        // 2) 슬라이더 값이 바뀔 때마다 호출되도록 리스너 등록
-        bgmSlider.onValueChanged.AddListener(Shared.SoundManager.SetMasterBGMVolume);
-        sfxSlider.onValueChanged.AddListener(Shared.SoundManager.SetMasterSFXVolume);
     }
 
     private void Update()
@@ -99,6 +87,7 @@ public class UI_Ingame : MonoBehaviour
 
     public void OnBtnRandomSpawn()
     {
+        Shared.SoundManager.PlaySound("SpawnBtn_SFX");
         Shared.SpawnManager.PlayerRandomSpawn();
     }
 
