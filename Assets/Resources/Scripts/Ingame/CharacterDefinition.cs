@@ -10,16 +10,16 @@ public enum Rating { Normal, Rare, Unique, Legendary}
 public class CharacterDefinition : ScriptableObject
 {
     [Header("기본 정보")]
-    public string typeName;      // ex. "근접_검사", "원거리_궁수"
+    public string typeName;      //캐릭터의 이름
 
     [Header("프리팹")]
-    public GameObject prefab;
+    public GameObject prefab;   //소환될 캐릭터의 프리팹
 
     [Header("스폰 지점 선택")]
     public bool isEnemy;            //타입에 따른 스폰위치 지정
 
     [Header("공격 유형")]
-    public AttackType attackType;
+    public AttackType attackType;   //근거리, 원거리 구분
 
     [Header("근접 세부 타입 (attackType = Melee 일 때)")]
     public MeleeType meleeType;
@@ -28,7 +28,13 @@ public class CharacterDefinition : ScriptableObject
     public RangeType rangeType;
 
     [Header("밸런스 프로필")]
-    public Rating rating;
+    public Rating rating;   //이 캐릭터의 등급
+    public float spawnWeight;    //이 캐릭터가 소환될 확률 가중치
+
+    [Header("Cost Settings")]
+    public int defaultSpawnCost = 10;   //기본 소환 비용
+    public int specialSpawnCost = 30;   //특별 소환 비용
+
 
     [Header("Attack Strategy")]
     public AttackStrategySO attackStrategy;     //타입에 따른 공격 방식 지정

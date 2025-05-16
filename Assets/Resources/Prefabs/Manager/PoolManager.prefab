@@ -109,12 +109,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9f0b8cf554410409d47b199bdd9b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  definitions: []
-  projectilePrefabs: []
+  definitions:
+  - {fileID: 11400000, guid: 341be0df96661fc41b65bf3b8a0ed78b, type: 2}
+  - {fileID: 11400000, guid: bb808cd68d304db4585fb168cac3a73c, type: 2}
+  - {fileID: 11400000, guid: a09b688233e9e7c479ffce5c11e4d4a7, type: 2}
+  - {fileID: 11400000, guid: b6f02b9382ca1ac42a344d0c5ddcee4d, type: 2}
+  - {fileID: 11400000, guid: fe2d3902ff5b45c4bb18571d91dbf208, type: 2}
+  - {fileID: 11400000, guid: 16dee19b6f74fa14aa332101667da706, type: 2}
+  - {fileID: 11400000, guid: 76c9d18802204a14c944c9bbb0ceef49, type: 2}
+  - {fileID: 11400000, guid: aee9f44498cb9934a9b88750a9116a53, type: 2}
+  - {fileID: 11400000, guid: e9f1ff187d28a1d4da607359304e1a88, type: 2}
+  - {fileID: 11400000, guid: 4db1c08fb5ac4a04db0519eedf60a74c, type: 2}
+  - {fileID: 11400000, guid: c162c5bc24ea96348badf10afdde5a3e, type: 2}
+  - {fileID: 11400000, guid: f482f2dba024a70449b748ab509e520c, type: 2}
+  - {fileID: 11400000, guid: d09e8bb7ecdf9e2479225c5b022e99fb, type: 2}
+  - {fileID: 11400000, guid: 12b101dc625ce3f4cacf8a6cb28691f6, type: 2}
+  - {fileID: 11400000, guid: f107b6575ed95a44eaa8d9d616ec13fc, type: 2}
+  - {fileID: 11400000, guid: 9dfcde1506144e94ab5debbb76719a70, type: 2}
+  - {fileID: 11400000, guid: 4b232bf6d8dea624fac227a818420885, type: 2}
+  - {fileID: 11400000, guid: 147e9a195ae07cd4ea8d63f53a2f8934, type: 2}
+  - {fileID: 11400000, guid: ea3984c4c6da10b478fd0867a5e73bb2, type: 2}
+  - {fileID: 11400000, guid: 2cd108093c64d2a4493b02950be713d3, type: 2}
+  - {fileID: 11400000, guid: f5df5b5ced67d6c49bb51785c3641822, type: 2}
+  - {fileID: 11400000, guid: 64e408e1924948a49a5d4f7be6489ed7, type: 2}
+  - {fileID: 11400000, guid: 0fd29e6cba64891409eed74e205b99d7, type: 2}
+  - {fileID: 11400000, guid: 1c24ef7a4b6196b41a8b7686dc4cda01, type: 2}
+  - {fileID: 11400000, guid: c05c6a8d4d363b64bb4d696eb10f9701, type: 2}
+  - {fileID: 11400000, guid: b56915655b2f3824fb0a3483d7190b87, type: 2}
+  - {fileID: 11400000, guid: f0bdf2a0a7bf14e4c9d8830ea56e1331, type: 2}
+  - {fileID: 11400000, guid: 151434cbb6b734341898e75619185f75, type: 2}
+  - {fileID: 11400000, guid: f2fd0e2326a16464ebe2ada0ad36ae9b, type: 2}
+  - {fileID: 11400000, guid: 96ae6f4514ff96b4d8ef0f14d9d37060, type: 2}
+  - {fileID: 11400000, guid: 88245f7eb02c8d84898b68c6c09a8d8e, type: 2}
+  - {fileID: 11400000, guid: a746c84d36f778649ad9cfbd09d14d95, type: 2}
+  - {fileID: 11400000, guid: 38995f2b96e25e24facf88c8ea1da782, type: 2}
+  - {fileID: 11400000, guid: 68efc0da985879341a9cbf5e9ab5d4cf, type: 2}
+  - {fileID: 11400000, guid: a2aaef2e18c930f4c925fd49c8896879, type: 2}
+  - {fileID: 11400000, guid: 945a1938bfef63d44b693693602dae37, type: 2}
+  - {fileID: 11400000, guid: 0a878b8ee8d3ff24b99c72cf2d1e5092, type: 2}
+  - {fileID: 11400000, guid: 1381ce8e2c3f3034399487a93d3fc821, type: 2}
+  projectilePrefabs:
+  - {fileID: 3593883055028549927, guid: 3ebde3d82a69a1d4c829f8618640e777, type: 3}
+  - {fileID: 1688448807676915914, guid: 8f4f2ffcdfd2a3946a3008d1c5d9cc39, type: 3}
+  - {fileID: 8321372205955303115, guid: 2b381c6a5b8e02a46aa6dd7ed9503635, type: 3}
   playerPoolContainer: {fileID: 5838418269374611946}
   enemyPoolContainer: {fileID: 2954875565927440816}
   projectileContainer: {fileID: 1732306854932173083}
-  defaultPoolSize: 5
+  characterPoolSize: 6
+  projectileSize: 3
 --- !u!1 &6215177890960062960
 GameObject:
   m_ObjectHideFlags: 0

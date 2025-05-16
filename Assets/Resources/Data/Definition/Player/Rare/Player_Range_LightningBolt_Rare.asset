@@ -19,6 +19,7 @@ MonoBehaviour:
   meleeType: 0
   rangeType: 3
   rating: 1
+  spawnWeight: 40
   attackStrategy: {fileID: 11400000, guid: 14d3e366e9e5e3041b674d62b90a8de0, type: 2}
   detectionMask:
     serializedVersion: 2

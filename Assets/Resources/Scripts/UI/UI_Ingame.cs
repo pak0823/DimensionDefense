@@ -24,11 +24,14 @@ public class UI_Ingame : MonoBehaviour
 
     [Header("Text")]
     public Text timer_Text;
+    public Text cost_Text;
 
     private float elapsedTime; //누적된 게임 시간(초)
 
     void Start()
     {
+        Shared.UI_Ingame = this;
+
         elapsedTime = 0f;
         if (timer_Text == null)
             timer_Text = GetComponent<Text>();
@@ -45,6 +48,12 @@ public class UI_Ingame : MonoBehaviour
 
         // 3) UI에 출력
         timer_Text.text = $"{minutes:00}:{seconds:00}";
+    }
+
+    public void UpdateCostUI()
+    {
+        if (cost_Text != null)
+            cost_Text.text = $"{Shared.GameManager.currentCost}";
     }
 
     bool IsShowPanel()
@@ -85,10 +94,16 @@ public class UI_Ingame : MonoBehaviour
         Option_Window.SetActive(IsShowWindow());
     }
 
-    public void OnBtnRandomSpawn()
+    public void OnBtnRandomDefaultSpawn()
     {
         Shared.SoundManager.PlaySound("SpawnBtn_SFX");
-        Shared.SpawnManager.PlayerRandomSpawn();
+        Shared.SpawnManager.PlayerDefaultSpawn();
+        //Shared.SpawnManager.PlayerRandomSpawn();
+    }
+    public void OnBtnRandomSpecialSpawn()
+    {
+        Shared.SoundManager.PlaySound("SpawnBtn_SFX");
+        Shared.SpawnManager.PlayerSpecialSpawn();
     }
 
     public void OnBtnEnemySpawn()
