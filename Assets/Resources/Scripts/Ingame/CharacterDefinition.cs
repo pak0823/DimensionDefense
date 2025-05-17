@@ -44,11 +44,11 @@ public class CharacterDefinition : ScriptableObject
 
     [Header("배율 (Rating 보정용)")]
     [Tooltip("Rare 등급에 곱해질 배율")]
-    public float rareMultiplier = 1.2f;
+    public float rareMultiplier = 1.5f;
     [Tooltip("Unique 등급에 곱해질 배율")]
-    public float uniqueMultiplier = 1.5f;
+    public float uniqueMultiplier = 2.0f;
     [Tooltip("Legendary 등급에 곱해질 배율")]
-    public float legendaryMultiplier = 2.0f;
+    public float legendaryMultiplier = 3f;
 
     [Header("세부 스탯 (AttackType+Subtype)")]
     public CharacterStats statsMeleeSword;

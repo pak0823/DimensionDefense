@@ -98,17 +98,11 @@ public class UI_Ingame : MonoBehaviour
     {
         Shared.SoundManager.PlaySound("SpawnBtn_SFX");
         Shared.SpawnManager.PlayerDefaultSpawn();
-        //Shared.SpawnManager.PlayerRandomSpawn();
     }
     public void OnBtnRandomSpecialSpawn()
     {
         Shared.SoundManager.PlaySound("SpawnBtn_SFX");
         Shared.SpawnManager.PlayerSpecialSpawn();
-    }
-
-    public void OnBtnEnemySpawn()
-    {
-        Shared.SpawnManager.EnemyRandomSpawn();
     }
 
     public void OnBtnExit()

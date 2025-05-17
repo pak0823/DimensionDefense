@@ -1,5 +1,6 @@
 // HPBarController.cs
 using UnityEngine;
+using static Unity.Burst.Intrinsics.X86.Avx;
 
 public class HPBarController : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class HPBarController : MonoBehaviour
         this.uiCanvas = uiCanvas;
 
         // 1) HPBar 프리팹 인스턴스화 (worldPositionStays = false)
-        var go = Instantiate(hpBarPrefab, uiCanvas, false);
+        var go = Instantiate(hpBarPrefab, uiCanvas.GetChild(4), false);
         hpBarInstance = go.GetComponent<HPBar>();
         if (hpBarInstance == null)
         {

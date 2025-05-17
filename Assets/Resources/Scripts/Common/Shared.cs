@@ -9,4 +9,5 @@ public static class Shared
     public static SceneFlowManager SceneFlowManager;
 
     public static UI_Ingame UI_Ingame;
+    public static TextSetting TextSetting;
 }

@@ -12,7 +12,6 @@ public class Range : MonoBehaviour
 
     public void Initialize(int dmg, bool isPlayer,float lifeTime ,GameObject prefab)
     {
-        Debug.Log("LifeTime: " + lifeTime);
         damage = dmg;
         isPlayerShot = isPlayer;
         definitionPrefab = prefab;

@@ -73,6 +73,7 @@
     <Compile Include="Assets\Resources\Scripts\Ingame\CharacterDefinition.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Attack\RangeAttack.cs" />
     <Compile Include="Assets\Resources\Scripts\Common\Shared.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\TextSetting.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\UI_Title.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Character.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Building\BuildingStats.cs" />

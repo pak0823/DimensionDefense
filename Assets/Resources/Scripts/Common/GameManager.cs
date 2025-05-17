@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.7f);  //0.7초마다 cost 1 증가
             AddCost(gainPerSec);
         }
     }
@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     {
         currentCost = Mathf.Min(currentCost + amount, maxCost);
         Shared.UI_Ingame.UpdateCostUI();
+        Shared.TextSetting.SetTextAlpha(currentCost);
     }
 
     /// <summary>

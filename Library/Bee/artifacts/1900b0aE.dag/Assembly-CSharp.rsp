@@ -394,6 +394,7 @@
 "Assets/Resources/Scripts/UI/HPBarController.cs"
 "Assets/Resources/Scripts/UI/PlatformCanvasScaler.cs"
 "Assets/Resources/Scripts/UI/PulsingScale.cs"
+"Assets/Resources/Scripts/UI/TextSetting.cs"
 "Assets/Resources/Scripts/UI/UI_Ingame.cs"
 "Assets/Resources/Scripts/UI/UI_Title.cs"
 "Assets/SPUM/Sample/Script/PlayerManager.cs"

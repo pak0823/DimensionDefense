@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Melee_DoubleSword
   m_EditorClassIdentifier: 
   maxHp: 230
-  attackDamage: 25
+  attackDamage: 15
   attackRange: 1
   attackCoolTime: 0.75
   moveSpeed: 2.7

@@ -2180,6 +2180,7 @@ GameObject:
   - component: {fileID: -5379494797116725804}
   - component: {fileID: 1861256395497951816}
   - component: {fileID: 5219509550063340348}
+  - component: {fileID: -543521102837594895}
   m_Layer: 6
   m_Name: Enemy_Melee_DoubleSword_Unique
   m_TagString: Enemy
@@ -2311,6 +2312,18 @@ MonoBehaviour:
   <attackRange>k__BackingField: 0
   <attackCoolTime>k__BackingField: 0
   <moveSpeed>k__BackingField: 0
+--- !u!114 &-543521102837594895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4847838609770726236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508f4e2f9ada73845a538d9804597114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4983291757369025525
 GameObject:
   m_ObjectHideFlags: 0
