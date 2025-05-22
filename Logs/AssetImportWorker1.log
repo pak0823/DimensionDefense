@@ -15,7 +15,7 @@ C:/Users/ziwoo/Documents/GitHub/Project_B
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-52287
+54929
 Successfully changed project path to: C:/Users/ziwoo/Documents/GitHub/Project_B
 C:/Users/ziwoo/Documents/GitHub/Project_B
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,15 +49,15 @@ C:/Users/ziwoo/Documents/GitHub/Project_B
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [23184]  Target information:
+Player connection [33496]  Target information:
 
-Player connection [23184]  * "[IP] 125.186.26.120 [Port] 0 [Flags] 2 [Guid] 1608534363 [EditorId] 1608534363 [Version] 1048832 [Id] WindowsEditor(7,Jiwoo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [33496]  * "[IP] 125.186.26.120 [Port] 0 [Flags] 2 [Guid] 3090346822 [EditorId] 3090346822 [Version] 1048832 [Id] WindowsEditor(7,Jiwoo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [23184] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [23184] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [33496] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [33496] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-Refreshing native plugins compatible for Editor in 5.47 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 5.93 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.60f1 (5f63fdee6d95)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.60f1/Editor/Data/Resources/UnitySubsystems
@@ -73,47 +73,47 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.60f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.60f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.60f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56916
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56504
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.60f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.60f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006756 seconds.
-- Loaded All Assemblies, in  0.247 seconds
+Registered in 0.008316 seconds.
+- Loaded All Assemblies, in  0.258 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 238 ms
+Android Extension - Scanning For ADB Devices 282 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.439 seconds
-Domain Reload Profiling: 684ms
-	BeginReloadAssembly (80ms)
+- Finished resetting the current domain, in  0.483 seconds
+Domain Reload Profiling: 739ms
+	BeginReloadAssembly (85ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
+		CreateAndSetChildDomain (0ms)
 	RebuildCommonClasses (22ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (95ms)
-		LoadAssemblies (79ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (98ms)
+		LoadAssemblies (84ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (94ms)
-			TypeCache.Refresh (93ms)
-				TypeCache.ScanAssembly (84ms)
+		AnalyzeDomain (96ms)
+			TypeCache.Refresh (95ms)
+				TypeCache.ScanAssembly (86ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (439ms)
+	FinalizeReload (483ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (410ms)
+		SetupLoadedEditorAssemblies (454ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (291ms)
+			InitializePlatformSupportModulesInManaged (333ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (1ms)
-			ProcessInitializeOnLoadAttributes (79ms)
-			ProcessInitializeOnLoadMethodAttributes (36ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (82ms)
+			ProcessInitializeOnLoadMethodAttributes (34ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -122,51 +122,51 @@ Domain Reload Profiling: 684ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.311 seconds
+- Loaded All Assemblies, in  0.338 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.290 seconds
-Domain Reload Profiling: 599ms
-	BeginReloadAssembly (105ms)
+- Finished resetting the current domain, in  0.295 seconds
+Domain Reload Profiling: 630ms
+	BeginReloadAssembly (116ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (17ms)
-	RebuildCommonClasses (21ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (27ms)
-	LoadAllAssembliesAndSetupDomain (149ms)
-		LoadAssemblies (162ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (158ms)
+		LoadAssemblies (183ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
 		AnalyzeDomain (46ms)
-			TypeCache.Refresh (37ms)
+			TypeCache.Refresh (36ms)
 				TypeCache.ScanAssembly (30ms)
 			ScanForSourceGeneratedMonoScriptInfo (7ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (290ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (295ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (201ms)
+		SetupLoadedEditorAssemblies (204ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (13ms)
+			InitializePlatformSupportModulesInManaged (14ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (37ms)
-			ProcessInitializeOnLoadAttributes (120ms)
+			BeforeProcessingInitializeOnLoad (38ms)
+			ProcessInitializeOnLoadAttributes (119ms)
 			ProcessInitializeOnLoadMethodAttributes (24ms)
-			AfterProcessingInitializeOnLoad (4ms)
+			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (9ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 2.53 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 2.71 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1605 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 22 unused Assets / (52.9 KB). Loaded Objects now: 2087.
+Unloading 22 unused Assets / (52.5 KB). Loaded Objects now: 2087.
 Memory consumption went from 86.9 MB to 86.9 MB.
-Total: 2.692800 ms (FindLiveObjects: 0.124200 ms CreateObjectMapping: 0.031300 ms MarkObjects: 2.446700 ms  DeleteObjects: 0.089300 ms)
+Total: 3.226000 ms (FindLiveObjects: 0.129800 ms CreateObjectMapping: 0.019800 ms MarkObjects: 2.975900 ms  DeleteObjects: 0.099600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
@@ -184,74 +184,24 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 688637.604065 seconds.
-  path: Assets/Resources/Prefabs/Ingame/Character/Enemy/Legendary/Enemy_Range_Boom_Legendary.prefab
-  artifactKey: Guid(6c78cae001f734c67b1c2cf4d74c89e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Ingame/Character/Enemy/Legendary/Enemy_Range_Boom_Legendary.prefab using Guid(6c78cae001f734c67b1c2cf4d74c89e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+  Time since last request: 722805.772283 seconds.
+  path: Assets/Resources/Sprites/Map/AnimatedAutum.png
+  artifactKey: Guid(6de043036f1a3d94ba83bfd543ffc9d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Sprites/Map/AnimatedAutum.png using Guid(6de043036f1a3d94ba83bfd543ffc9d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '9fa572f9e916ad5e6873377acb7d3964') in 0.074707 seconds
+ -> (artifact id: '18f47c0bf7a9a1d4d6a43ff6dabf7705') in 0.083759 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 255
+Number of asset objects unloaded after import = 18
 ========================================================================
 Received Import Request.
-  Time since last request: 0.805024 seconds.
-  path: Assets/Resources/Prefabs/Ingame/Character/Enemy/Unique/Enemy_Melee_DoubleSword_Unique.prefab
-  artifactKey: Guid(40d7a418130ef4dfc963730368bc74ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Ingame/Character/Enemy/Unique/Enemy_Melee_DoubleSword_Unique.prefab using Guid(40d7a418130ef4dfc963730368bc74ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Resources/Sprites/Map/SpikeTiles.png
+  artifactKey: Guid(98ad0909f559fbf46b237c634fa23f3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Sprites/Map/SpikeTiles.png using Guid(98ad0909f559fbf46b237c634fa23f3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '8f346b57c38e2fc33d8c63844ddbe01e') in 0.030538 seconds
+ -> (artifact id: '4f22a04459ad152e76f9d0afdcc61adc') in 0.014702 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 251
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Resources/Prefabs/Ingame/Character/Enemy/Unique/Enemy_Melee_SwordShield_Unique.prefab
-  artifactKey: Guid(17b2559b65857488796ce0bf29f56a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Ingame/Character/Enemy/Unique/Enemy_Melee_SwordShield_Unique.prefab using Guid(17b2559b65857488796ce0bf29f56a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'da5f8ae2dd5ae98a315fd5d16db317c1') in 0.059704 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 263
-========================================================================
-Received Import Request.
-  Time since last request: 1.842621 seconds.
-  path: Assets/Resources/Prefabs/Ingame/Character/Enemy/Rare/Enemy_Melee_DoubleSword_Rare_1.prefab
-  artifactKey: Guid(cc45723031f2648c0ba48e0e76684633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Ingame/Character/Enemy/Rare/Enemy_Melee_DoubleSword_Rare_1.prefab using Guid(cc45723031f2648c0ba48e0e76684633) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '64c17c74d381a1e0f68be2d9d6c510a3') in 0.048635 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 262
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Resources/Prefabs/Ingame/Character/Enemy/Rare/Enemy_Melee_DoubleSword_Rare_2.prefab
-  artifactKey: Guid(ddbf09db7bc774cabb5d46e3a3a70730) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Ingame/Character/Enemy/Rare/Enemy_Melee_DoubleSword_Rare_2.prefab using Guid(ddbf09db7bc774cabb5d46e3a3a70730) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'f4224c5c56bfcb5637714e1cfe549926') in 0.050837 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 258
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Resources/Prefabs/Ingame/Character/Enemy/Rare/Enemy_Range_LightningBolt_Rare.prefab
-  artifactKey: Guid(cdf58f088f9ff419b85fa0917cdf4bf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Ingame/Character/Enemy/Rare/Enemy_Range_LightningBolt_Rare.prefab using Guid(cdf58f088f9ff419b85fa0917cdf4bf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'e2ae665219000b2240451d33b7990b47') in 0.039558 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 257
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Resources/Prefabs/Ingame/Character/Enemy/Rare/Enemy_Ranged_Mage_Buffer_Rare.prefab
-  artifactKey: Guid(f7b1e2da167594a0e97c2ce647a3d7ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Ingame/Character/Enemy/Rare/Enemy_Ranged_Mage_Buffer_Rare.prefab using Guid(f7b1e2da167594a0e97c2ce647a3d7ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'b975bcd62a5d51cb501d2ebd97e464ca') in 0.033635 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 257
+Number of asset objects unloaded after import = 3
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다.
 AssetImportWorker is now disconnected from the server

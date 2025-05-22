@@ -1,5 +1,13 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public enum GameState
+{
+    Playing,
+    GameOver
+}
 
 public class GameManager : MonoBehaviour
 {
@@ -7,6 +15,10 @@ public class GameManager : MonoBehaviour
     public int currentCost = 0;
     public int maxCost = 500;
     public int gainPerSec = 1;
+
+    public GameState State { get; private set; } = GameState.Playing;
+    public event Action OnGameOver;
+    public event Action OnGameRestart;
 
 
     private void Awake()
@@ -17,6 +29,31 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(CostGainRoutine());
+    }
+
+    public void GameOver()  // 게임 오버
+    {
+        if (State == GameState.GameOver) return;
+        State = GameState.GameOver;
+
+        //// 시간 정지
+        //Time.timeScale = 0f;
+        OnGameOver?.Invoke();
+    }
+
+    
+    public void RestartGame() // 게임 다시 시작
+    {
+        if (State != GameState.GameOver) return;
+        State = GameState.Playing;
+
+        // 시간 재개
+        Time.timeScale = 1f;
+        OnGameRestart?.Invoke();
+
+        // 씬 리로드 (현재 씬)
+        var sceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(sceneName);
     }
 
     private IEnumerator CostGainRoutine()

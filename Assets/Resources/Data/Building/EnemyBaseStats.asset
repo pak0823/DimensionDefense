@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: EnemyBaseStats
   m_EditorClassIdentifier: 
   maxHp: 1000
+  isEnemy: 1
