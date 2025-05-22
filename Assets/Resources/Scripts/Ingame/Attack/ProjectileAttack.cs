@@ -17,9 +17,12 @@ public class ProjectileAttack : AttackStrategySO
     [Tooltip("Animator에서 사용할 트리거 이름")]
     public string attackTrigger = "Attack";
 
+    [Tooltip("SoundManager에서 실행할 이벤트")]
     string soundName;
     public static event Action OnFireBoltAttack;
     public static event Action OnArrowAttack;
+    public static event Action OnHolyArrowAttack;
+    public static event Action OnWindBreathAttack;
 
     public override void Attack(GameObject self, GameObject target)
     {
@@ -67,6 +70,12 @@ public class ProjectileAttack : AttackStrategySO
                     break;
                 case "Arrow":
                     OnArrowAttack?.Invoke();
+                    break;
+                case "HolyArrow":
+                        OnHolyArrowAttack?.Invoke();
+                    break;
+                case "WindBreath":
+                    OnWindBreathAttack?.Invoke();
                     break;
                 default:
                     Debug.Log("사운드가 없습니다.");

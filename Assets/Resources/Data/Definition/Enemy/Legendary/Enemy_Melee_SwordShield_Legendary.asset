@@ -16,10 +16,12 @@ MonoBehaviour:
   prefab: {fileID: 5763772642368634643, guid: 0eefa5e28d29147ad8fda02ec509d1dc, type: 3}
   isEnemy: 1
   attackType: 0
-  meleeType: 6
+  meleeType: 7
   rangeType: 0
   rating: 3
   spawnWeight: 1
+  defaultSpawnCost: 10
+  specialSpawnCost: 30
   attackStrategy: {fileID: 11400000, guid: ce05691a5d90b6d498e660e437d925b5, type: 2}
   detectionMask:
     serializedVersion: 2

@@ -4,8 +4,8 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
     [Header("Pan Speed Settings")]
-    public float mousePanSpeed = 150f;      // PC용
-    public float touchPanSpeed = 0.5f;   // 모바일용
+    float mousePanSpeed = 80f;      // PC용
+    float touchPanSpeed = 0.2f;   // 모바일용
 
     [Header("Horizontal Bounds")]
     // 카메라가 이동할 수 있는 최소/최대 X좌표

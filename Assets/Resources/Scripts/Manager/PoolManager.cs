@@ -25,9 +25,10 @@ public class PoolManager : MonoBehaviour
     public int projectileSize = 3;      //투사체 및 범위 공격 풀 생성 시 할당할 크기
 
     // prefab → [해당 Objedt] 전용 풀
-    private Dictionary<GameObject, ObjectPool<Character>> poolDict;
+    private Dictionary<GameObject, ObjectPool<Character>> characterPoolDict;
     private Dictionary<GameObject, ObjectPool<Projectile>> projectilePoolDict;
-    private Dictionary<GameObject, ObjectPool<Range>> RnagePoolDict;
+    private Dictionary<GameObject, ObjectPool<Range>> rangePoolDict;
+    private Dictionary<GameObject, ObjectPool<Buff>> buffPoolDict;
 
     void Awake()
     {
@@ -45,7 +46,7 @@ public class PoolManager : MonoBehaviour
     // CharacterDefinition 리스트를 순회하며 풀 생성
     private void CreatePools()
     {
-        poolDict = new Dictionary<GameObject, ObjectPool<Character>>();
+        characterPoolDict = new Dictionary<GameObject, ObjectPool<Character>>();
 
         foreach (var def in definitions)
         {
@@ -54,7 +55,7 @@ public class PoolManager : MonoBehaviour
 
             // Character 컴포넌트가 있는 프리팹만 풀 생성
             var comp = prefab.GetComponent<Character>();
-            if (comp != null && !poolDict.ContainsKey(prefab))
+            if (comp != null && !characterPoolDict.ContainsKey(prefab))
             {
                 // 풀링 인스턴스이 배치될 부모 컨테이너 결정
                 Transform parent = def.isEnemy ? enemyPoolContainer : playerPoolContainer;
@@ -66,36 +67,48 @@ public class PoolManager : MonoBehaviour
 
                 // 해당 컨테이너를 부모로 풀 생성
                 var pool = new ObjectPool<Character>(comp, characterPoolSize, parent);
-                poolDict.Add(prefab, pool);
+                characterPoolDict.Add(prefab, pool);
             }
         }
 
         projectilePoolDict = new Dictionary<GameObject, ObjectPool<Projectile>>();
-        RnagePoolDict = new Dictionary<GameObject, ObjectPool<Range>>();
+        rangePoolDict = new Dictionary<GameObject, ObjectPool<Range>>();
+        buffPoolDict = new Dictionary<GameObject, ObjectPool<Buff>>();
 
         if(projectilePoolDict != null)
         {
             foreach (var projPrefab in projectilePrefabs)
             {
                 if (projPrefab == null) continue;
-                var comp = projPrefab.GetComponent<Projectile>();
-                if (comp == null) continue;
+                var projectile = projPrefab.GetComponent<Projectile>();
+                if (projectile == null) continue;
 
                 projectilePoolDict[projPrefab] =
-                  new ObjectPool<Projectile>(comp, projectileSize, projectileContainer);
+                  new ObjectPool<Projectile>(projectile, projectileSize, projectileContainer);
             }
         }
-
-        if (RnagePoolDict != null)
+        else if (rangePoolDict != null)
         {
-            foreach (var projPrefab in projectilePrefabs)
+            foreach (var rangePrefab in projectilePrefabs)
             {
-                if (projPrefab == null) continue;
-                var comp = projPrefab.GetComponent<Range>();
-                if (comp == null) continue;
+                if (rangePrefab == null) continue;
+                var range = rangePrefab.GetComponent<Range>();
+                if (range == null) continue;
 
-                RnagePoolDict[projPrefab] =
-                  new ObjectPool<Range>(comp, projectileSize, projectileContainer);
+                rangePoolDict[rangePrefab] =
+                  new ObjectPool<Range>(range, projectileSize, projectileContainer);
+            }
+        }
+        else if(buffPoolDict != null)
+        {
+            foreach (var buffPrefab in projectilePrefabs)
+            {
+                if (buffPrefab == null) continue;
+                var buff = buffPrefab.GetComponent<Buff>();
+                if (buff == null) continue;
+
+                buffPoolDict[buffPrefab] =
+                  new ObjectPool<Buff>(buff, projectileSize, projectileContainer);
             }
         }
             
@@ -106,7 +119,7 @@ public class PoolManager : MonoBehaviour
     /// </summary>
     public GameObject SpawnCharacter(GameObject prefab, Vector3 position)
     {
-        if (poolDict.TryGetValue(prefab, out var pool))
+        if (characterPoolDict.TryGetValue(prefab, out var pool))
         {
             var character = pool.Get(position);
             return character.gameObject;
@@ -128,7 +141,7 @@ public class PoolManager : MonoBehaviour
         if (charComp != null)
         {
             var prefab = charComp.definitionPrefab;
-            if (prefab != null && poolDict.TryGetValue(prefab, out var pool))
+            if (prefab != null && characterPoolDict.TryGetValue(prefab, out var pool))
             {
                 // 원래 풀 컨테이너(Parent)에 돌려놓기
                 _poolObj.transform.SetParent(pool.parent);
@@ -145,8 +158,11 @@ public class PoolManager : MonoBehaviour
         if (projectilePoolDict.TryGetValue(prefab, out var pool_projectile))
             return pool_projectile.Get(pos).gameObject;
 
-        if (RnagePoolDict.TryGetValue(prefab, out var pool_lightning))
-            return pool_lightning.Get(pos).gameObject;
+        if (rangePoolDict.TryGetValue(prefab, out var pool_range))
+            return pool_range.Get(pos).gameObject;
+
+        if (rangePoolDict.TryGetValue(prefab, out var pool_buff))
+            return pool_buff.Get(pos).gameObject;
 
         return Instantiate(prefab, pos, Quaternion.identity);
     }
@@ -157,7 +173,8 @@ public class PoolManager : MonoBehaviour
         if (_poolObj == null) return;
 
         var projectile = _poolObj.GetComponent<Projectile>();
-        var lightning = _poolObj.GetComponent<Range>();
+        var range = _poolObj.GetComponent<Range>();
+        var buff = _poolObj.GetComponent<Buff>();
 
         if (projectile != null && projectilePoolDict.TryGetValue(projectile.definitionPrefab, out var pool_projectile))
         {
@@ -166,10 +183,17 @@ public class PoolManager : MonoBehaviour
             return;
         }
 
-        if (lightning != null && projectilePoolDict.TryGetValue(lightning.definitionPrefab, out var pool_lightning))
+        if (range != null && projectilePoolDict.TryGetValue(range.definitionPrefab, out var pool_range))
         {
             _poolObj.SetActive(false);
-            _poolObj.transform.SetParent(pool_lightning.parent, worldPositionStays: false);
+            _poolObj.transform.SetParent(pool_range.parent, worldPositionStays: false);
+            return;
+        }
+
+        if (range != null && projectilePoolDict.TryGetValue(range.definitionPrefab, out var pool_buff))
+        {
+            _poolObj.SetActive(false);
+            _poolObj.transform.SetParent(pool_buff.parent, worldPositionStays: false);
             return;
         }
 

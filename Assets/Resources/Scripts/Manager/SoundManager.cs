@@ -34,8 +34,11 @@ public class SoundManager : MonoBehaviour
         Character.OnHit += HandleHit;
         ProjectileAttack.OnFireBoltAttack += HandleFireBolt;
         ProjectileAttack.OnArrowAttack += HandleArrow;
+        ProjectileAttack.OnHolyArrowAttack += HandleHolyArrow;
+        ProjectileAttack.OnWindBreathAttack += HandleWindBreath;
         RangeAttack.OnLightiningAttack += HandleLightning;
         RangeAttack.OnBoomAttack += HandleBoom;
+        BuffAttack.OnHeal += HandleHeal;
     }
 
     private void OnDisable()
@@ -43,8 +46,11 @@ public class SoundManager : MonoBehaviour
         Character.OnHit -= HandleHit;
         ProjectileAttack.OnFireBoltAttack -= HandleFireBolt;
         ProjectileAttack.OnArrowAttack -= HandleArrow;
+        ProjectileAttack.OnHolyArrowAttack -= HandleHolyArrow;
+        ProjectileAttack.OnWindBreathAttack -= HandleWindBreath;
         RangeAttack.OnLightiningAttack -= HandleLightning;
         RangeAttack.OnBoomAttack -= HandleBoom;
+        BuffAttack.OnHeal -= HandleHeal;
 
     }
 
@@ -75,26 +81,14 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private void HandleHit()
-    {
-        PlaySoundDelayed("Hit_SFX",0.1f);
-    }
-    private void HandleFireBolt()
-    {
-        PlaySoundDelayed("FireBolt_SFX",0.1f);
-    }
-    private void HandleArrow()
-    {
-        PlaySoundDelayed("Arrow_SFX",0.1f);
-    }
-    private void HandleLightning()
-    {
-        PlaySoundDelayed("Lightning_SFX",0.2f);
-    }
-    private void HandleBoom()
-    {
-        PlaySoundDelayed("Boom_SFX",0.5f);
-    }
+    private void HandleHit() => PlaySoundDelayed("Hit_SFX", 0.1f);
+    private void HandleFireBolt() => PlaySoundDelayed("FireBolt_SFX", 0.1f);
+    private void HandleArrow() => PlaySoundDelayed("Arrow_SFX", 0.1f);
+    private void HandleLightning() => PlaySoundDelayed("Lightning_SFX", 0.2f);
+    private void HandleBoom() => PlaySoundDelayed("Boom_SFX", 0.5f);
+    private void HandleHeal() => PlaySound("Heal_SFX");
+    private void HandleHolyArrow() => PlaySound("HolyArrow_SFX");
+    private void HandleWindBreath() => PlaySound("WindBreath_SFX");
 
 
     public void PlaySound(string _name)

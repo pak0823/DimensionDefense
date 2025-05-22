@@ -51,7 +51,7 @@ public class UI_Title : MonoBehaviour
     public void OnBtnExit()
     {
         // 빌드된 앱에서는 이 코드로 종료
-        //Application.Quit();
+        Application.Quit();
 
         // 에디터에서는 플레이 모드만 멈추도록
 #if UNITY_EDITOR

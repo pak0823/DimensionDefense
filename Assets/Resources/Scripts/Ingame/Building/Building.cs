@@ -16,9 +16,17 @@ public class Building : MonoBehaviour, IDamageable
     public void TakeDamage(int amount)
     {
         currentHp -= amount;
-        Debug.Log($"{name} took {amount} damage, HP = {currentHp}/{stats.maxHp}");
         if (currentHp <= 0)
             DestroyBuilding();
+
+        OnHpChanged?.Invoke(currentHp);
+    }
+
+    public void TakeBuff(int amount)
+    {
+        currentHp += amount;
+        if (currentHp >= stats.maxHp)
+            currentHp = stats.maxHp;
 
         OnHpChanged?.Invoke(currentHp);
     }

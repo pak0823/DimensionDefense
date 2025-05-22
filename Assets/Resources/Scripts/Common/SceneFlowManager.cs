@@ -85,6 +85,7 @@ public class SceneFlowManager : MonoBehaviour
     /// </summary>
     public void ChangeScene(string _sceneName)
     {
+        Time.timeScale = 1;
         // 페이드 아웃 애니메이션 실행 후 로드
         StartCoroutine(DoSceneChange(_sceneName, 2f));
     }

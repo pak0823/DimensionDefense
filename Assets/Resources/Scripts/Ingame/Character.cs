@@ -11,6 +11,7 @@ public class Character : MonoBehaviour, IDamageable
 {
     [Header("Identity")] // 공통 속성·메서드
     public string characterName;
+    public AttackType characterType;
 
 
     [field: SerializeField] public int maxHp { get; private set; }
@@ -23,24 +24,34 @@ public class Character : MonoBehaviour, IDamageable
     // ① 스폰된 원본 Prefab을 저장할 필드
     public GameObject definitionPrefab { get; private set; }
 
+    public CharacterDefinition definition;
+
 
 
     public event Action<int> OnHpChanged;   // HP가 바뀔 때마다 호출되는 이벤트 (현재 HP 값을 인자로 넘깁니다)
     public static event Action OnHit;   //피격을 받을 때 호출되는 사운드 이벤트
+    public static event Action OnBuff;
     private Animator animator;
 
     // 기존 Initialize를 오버로드하여 CharacterDefinition까지 받도록
     public void Initialize(CharacterDefinition def)
     {
+        //definition 저장
+        definition = def;
         //이름 저장
         characterName = def.typeName;
 
         // 프리팹 키 저장
         definitionPrefab = def.prefab;
 
+        characterType = def.attackType;
+
         // 기존 스탯 초기화 로직 호출
         Initialize(def.GetStats());
     }
+
+    public bool IsEnemy => definition != null && definition.isEnemy;
+    public bool IsAlly => definition != null && !definition.isEnemy;
 
     public virtual void Initialize(CharacterStats stats) 
     {
@@ -90,6 +101,18 @@ public class Character : MonoBehaviour, IDamageable
         if (currentHp <= 0)
         {
             StartCoroutine(Die());
+        }
+    }
+
+    public void TakeBuff(int amount)
+    {
+        currentHp += amount;
+        OnHpChanged?.Invoke(currentHp);
+        OnBuff?.Invoke();
+
+        if(currentHp >= maxHp)
+        {
+            currentHp = maxHp;
         }
     }
 

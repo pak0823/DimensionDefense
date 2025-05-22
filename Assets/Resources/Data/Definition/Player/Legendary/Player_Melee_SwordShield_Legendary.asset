@@ -20,13 +20,16 @@ MonoBehaviour:
   rangeType: 0
   rating: 3
   spawnWeight: 1
+  defaultSpawnCost: 10
+  specialSpawnCost: 30
   attackStrategy: {fileID: 11400000, guid: ce05691a5d90b6d498e660e437d925b5, type: 2}
+  subAttackStrategy: {fileID: 11400000, guid: be8806d113b1395439466defa9b44e3d, type: 2}
   detectionMask:
     serializedVersion: 2
     m_Bits: 64
   rareMultiplier: 1.2
-  uniqueMultiplier: 1.5
-  legendaryMultiplier: 2
+  uniqueMultiplier: 2
+  legendaryMultiplier: 3
   statsMeleeSword: {fileID: 0}
   statsMeleeDoubleShield: {fileID: 0}
   statsMeleeDoubleSword: {fileID: 0}

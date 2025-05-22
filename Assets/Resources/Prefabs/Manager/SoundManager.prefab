@@ -65,7 +65,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: FireBolt_SFX
     clip: {fileID: 8300000, guid: bcfee9a8c2bee8c4584c072820252e01, type: 3}
-    volume: 0.1
+    volume: 0.05
     loop: 0
     category: 1
     source: {fileID: 0}
@@ -84,6 +84,36 @@ MonoBehaviour:
   - name: TitleBtn_SFX
     clip: {fileID: 8300000, guid: f9ecd002b3a9d6345a7ccefe5850bdef, type: 3}
     volume: 1
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: Heal_SFX
+    clip: {fileID: 8300000, guid: d2e41e802b0b5a349b30a3c09db1d3e5, type: 3}
+    volume: 0.05
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: Boom_SFX
+    clip: {fileID: 8300000, guid: 13dcc65cb0416704cac8382066da1bdb, type: 3}
+    volume: 0.1
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: Lightning_SFX
+    clip: {fileID: 8300000, guid: 6038890e8a07d494499f8e3e9a7b305e, type: 3}
+    volume: 0.1
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: HolyArrow_SFX
+    clip: {fileID: 8300000, guid: 484962b6299d1af478555716e10c161b, type: 3}
+    volume: 0.1
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: WindBreath_SFX
+    clip: {fileID: 8300000, guid: 62e5377b3906f35498413e70b0804e15, type: 3}
+    volume: 0.05
     loop: 0
     category: 1
     source: {fileID: 0}

@@ -15,18 +15,16 @@ public class UI_Ingame : MonoBehaviour
     public GameObject Menu_Panel;
     public GameObject Option_Window;
 
-
     bool isShowWindow = false;
     bool isShowPanel = false;
-
-
-    public Button enemy_SpawnButton;    //임시 버튼
 
     [Header("Text")]
     public Text timer_Text;
     public Text cost_Text;
 
     private float elapsedTime; //누적된 게임 시간(초)
+
+    public Button Test_Button;
 
     void Start()
     {
@@ -54,6 +52,11 @@ public class UI_Ingame : MonoBehaviour
     {
         if (cost_Text != null)
             cost_Text.text = $"{Shared.GameManager.currentCost}";
+    }
+
+    public void OnTestBtn()
+    {
+        Shared.SpawnManager.TestSpawn();
     }
 
     bool IsShowPanel()
@@ -107,25 +110,11 @@ public class UI_Ingame : MonoBehaviour
 
     public void OnBtnExit()
     {
-        // 빌드된 앱에서는 이 코드로 종료
-        //Application.Quit();
-
-        // 에디터에서는 플레이 모드만 멈추도록
-#if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
-#endif
+        Shared.SceneFlowManager.ChangeScene("TitleScene");
     }
 
     public void OnBtnSaveOption()
     {
         ShowWindow();
     }
-
-
-    //public void ResetTimer()    //필요 시 호출
-    //{
-    //    elapsedTime = 0f;
-    //}
-
-
 }

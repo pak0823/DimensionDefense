@@ -3,7 +3,7 @@ using UnityEngine;
 
 public enum AttackType { Melee, Range}
 public enum MeleeType { None ,Sword, Axe, Spear, DoubleShield, DoubleSword, DoubleAxe, SwordShield, SpearShield, AxeShield }
-public enum RangeType { None, Bow, FireBolt, LightningBolt, Boom, Heal, Buffer }
+public enum RangeType { None, Bow, FireBolt, LightningBolt, Boom, Heal, WindBreath}
 public enum Rating { Normal, Rare, Unique, Legendary}
 
 [CreateAssetMenu(menuName = "Definition/CharacterDefinition")]
@@ -38,6 +38,7 @@ public class CharacterDefinition : ScriptableObject
 
     [Header("Attack Strategy")]
     public AttackStrategySO attackStrategy;     //타입에 따른 공격 방식 지정
+    public AttackStrategySO subAttackStrategy;   //레전드리 등급 캐릭터 추가 공격
 
     [Header("감지할 레이어")]
     public LayerMask detectionMask;     //어떤 레이어를 감지할건지 선택
@@ -108,7 +109,7 @@ public class CharacterDefinition : ScriptableObject
                     case RangeType.LightningBolt: baseStats = statsRangeLightningBolt; break;
                     case RangeType.Boom: baseStats = statsRangeBoom; break;
                     case RangeType.Heal: baseStats = statsRangeHeal; break;
-                    case RangeType.Buffer: baseStats = statsRangeBuffer; break;
+                    case RangeType.WindBreath: baseStats = statsRangeBuffer; break;
                     default: baseStats = statsRangeBow; break;
                 }
                 break;

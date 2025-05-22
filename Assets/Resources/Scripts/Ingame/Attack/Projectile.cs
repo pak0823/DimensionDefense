@@ -43,14 +43,18 @@ public class Projectile : MonoBehaviour
         {
             var dmgable = other.GetComponentInParent<IDamageable>();
             dmgable?.TakeDamage(damage);
-            ReturnToPool();
+
+            if(!this.CompareTag("Through"))
+                ReturnToPool();
         }
         // 적이 쐈다면, 플레이어 태그에만 반응
         else if (!isPlayerShot && other.CompareTag("Player"))
         {
             var dmgable = other.GetComponentInParent<IDamageable>();
             dmgable?.TakeDamage(damage);
-            ReturnToPool();
+
+            if (!this.CompareTag("Through"))
+                ReturnToPool();
         }
     }
 

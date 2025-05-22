@@ -1,0 +1,70 @@
+[
+    {
+        "merged": "com.DefaultCompany.Project_B.launcher-merged_res-5:/mipmap-xxxhdpi_app_icon_round.png.flat",
+        "source": "com.DefaultCompany.Project_B.launcher-main-6:/mipmap-xxxhdpi/app_icon_round.png"
+    },
+    {
+        "merged": "com.DefaultCompany.Project_B.launcher-merged_res-5:/mipmap-xxhdpi_app_icon_round.png.flat",
+        "source": "com.DefaultCompany.Project_B.launcher-main-6:/mipmap-xxhdpi/app_icon_round.png"
+    },
+    {
+        "merged": "com.DefaultCompany.Project_B.launcher-merged_res-5:/mipmap-mdpi_app_icon_round.png.flat",
+        "source": "com.DefaultCompany.Project_B.launcher-main-6:/mipmap-mdpi/app_icon_round.png"
+    },
+    {
+        "merged": "com.DefaultCompany.Project_B.launcher-merged_res-5:/mipmap-xxxhdpi_app_icon.png.flat",
+        "source": "com.DefaultCompany.Project_B.launcher-main-6:/mipmap-xxxhdpi/app_icon.png"
+    },
+    {
+        "merged": "com.DefaultCompany.Project_B.launcher-merged_res-5:/mipmap-mdpi_app_icon.png.flat",
+        "source": "com.DefaultCompany.Project_B.launcher-main-6:/mipmap-mdpi/app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\ziwoo\\.gradle\\daemon\\7.5.1\\com.DefaultCompany.Project_B.launcher-merged_res-5:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\ziwoo\\.gradle\\daemon\\7.5.1\\com.DefaultCompany.Project_B.launcher-main-6:\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\ziwoo\\.gradle\\daemon\\7.5.1\\com.DefaultCompany.Project_B.launcher-merged_res-5:\\mipmap-mdpi_app_icon.png.flat",
+        "source": "C:\\Users\\ziwoo\\.gradle\\daemon\\7.5.1\\com.DefaultCompany.Project_B.launcher-main-6:\\mipmap-mdpi\\app_icon.png"
+    },
+    {
+        "merged": "com.DefaultCompany.Project_B.launcher-merged_res-5:/mipmap-xxhdpi_app_icon.png.flat",
+        "source": "com.DefaultCompany.Project_B.launcher-main-6:/mipmap-xxhdpi/app_icon.png"
+    },
+    {
+        "merged": "com.DefaultCompany.Project_B.launcher-merged_res-5:/mipmap-xhdpi_app_icon.png.flat",
+        "source": "com.DefaultCompany.Project_B.launcher-main-6:/mipmap-xhdpi/app_icon.png"
+    },
+    {
+        "merged": "com.DefaultCompany.Project_B.launcher-merged_res-5:/mipmap-hdpi_app_icon_round.png.flat",
+        "source": "com.DefaultCompany.Project_B.launcher-main-6:/mipmap-hdpi/app_icon_round.png"
+    },
+    {
+        "merged": "com.DefaultCompany.Project_B.launcher-merged_res-5:/mipmap-hdpi_app_icon.png.flat",
+        "source": "com.DefaultCompany.Project_B.launcher-main-6:/mipmap-hdpi/app_icon.png"
+    },
+    {
+        "merged": "com.DefaultCompany.Project_B.launcher-merged_res-5:/mipmap-ldpi_app_icon_round.png.flat",
+        "source": "com.DefaultCompany.Project_B.launcher-main-6:/mipmap-ldpi/app_icon_round.png"
+    },
+    {
+        "merged": "C:\\Users\\ziwoo\\.gradle\\daemon\\7.5.1\\com.DefaultCompany.Project_B.launcher-merged_res-5:\\mipmap-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\ziwoo\\.gradle\\daemon\\7.5.1\\com.DefaultCompany.Project_B.launcher-main-6:\\mipmap-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\ziwoo\\.gradle\\daemon\\7.5.1\\com.DefaultCompany.Project_B.launcher-merged_res-5:\\mipmap-anydpi-v26_app_icon_round.xml.flat",
+        "source": "C:\\Users\\ziwoo\\.gradle\\daemon\\7.5.1\\com.DefaultCompany.Project_B.launcher-main-6:\\mipmap-anydpi-v26\\app_icon_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\ziwoo\\.gradle\\daemon\\7.5.1\\com.DefaultCompany.Project_B.launcher-merged_res-5:\\mipmap-anydpi-v26_app_icon.xml.flat",
+        "source": "C:\\Users\\ziwoo\\.gradle\\daemon\\7.5.1\\com.DefaultCompany.Project_B.launcher-main-6:\\mipmap-anydpi-v26\\app_icon.xml"
+    },
+    {
+        "merged": "com.DefaultCompany.Project_B.launcher-merged_res-5:/mipmap-ldpi_app_icon.png.flat",
+        "source": "com.DefaultCompany.Project_B.launcher-main-6:/mipmap-ldpi/app_icon.png"
+    },
+    {
+        "merged": "com.DefaultCompany.Project_B.launcher-merged_res-5:/mipmap-xhdpi_app_icon_round.png.flat",
+        "source": "com.DefaultCompany.Project_B.launcher-main-6:/mipmap-xhdpi/app_icon_round.png"
+    }
+]
