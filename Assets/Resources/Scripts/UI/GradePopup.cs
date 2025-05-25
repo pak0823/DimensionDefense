@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements.Experimental;
 
 public class GradePopup : MonoBehaviour
 {
@@ -44,9 +43,22 @@ public class GradePopup : MonoBehaviour
 
     }
 
-    public void ShowWaringText()
+    public void ShowWarningText(int _warningcode)
     {
-        //string gradeStr = rating.ToString();
+        waringText.color = Color.red;
+
+        switch (_warningcode)
+        {
+            case 0:
+                waringText.text = "돈이 부족합니다!";
+                break;
+            case 1:
+                waringText.text = "쿨타임입니다!";
+                break;
+        }
+
+        StopAllCoroutines();
+        StartCoroutine(DoShow());
     }
 
     private IEnumerator DoShow()

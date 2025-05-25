@@ -19,10 +19,11 @@ MonoBehaviour:
   meleeType: 0
   rangeType: 5
   rating: 1
-  spawnWeight: 40
+  spawnWeight: 30
   defaultSpawnCost: 10
   specialSpawnCost: 30
   attackStrategy: {fileID: 11400000, guid: 6dcba7f4ff62efc4097f87a14363947a, type: 2}
+  subAttackStrategy: {fileID: 0}
   detectionMask:
     serializedVersion: 2
     m_Bits: 128

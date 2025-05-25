@@ -18,12 +18,15 @@ public class Building : MonoBehaviour, IDamageable
 
     public void TakeDamage(int amount)
     {
-        currentHp -= amount;
-        if (currentHp <= 0)
-            DestroyBuilding();
-            //StartCoroutine(DestroyBuilding());
+        if (Shared.GameManager.State == GameState.GameOver) return;
 
+        currentHp -= amount;
         OnHpChanged?.Invoke(currentHp);
+
+        if (currentHp <= 0)
+        {
+            DestroyBuilding();
+        }
     }
 
     public void TakeBuff(int amount)
@@ -36,9 +39,8 @@ public class Building : MonoBehaviour, IDamageable
     }
     private void DestroyBuilding()
     {
+        Debug.Log("±âÁö ÆÄ±«");
         Shared.GameManager.GameOver();
-        // ÆÄ±« ÀÌÆåÆ®, °ÔÀÓ ¿À¹ö ·ÎÁ÷ µî
-        //yield return new WaitForSeconds(1f);
         Destroy(gameObject);
 
     }

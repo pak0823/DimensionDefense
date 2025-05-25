@@ -49,15 +49,15 @@ public abstract class UIManager : MonoBehaviour
     {
         if (panel == null) return;
         panel.SetActive(true);
-        if (pauseTime)
-            Time.timeScale = 0f;
+        //if (pauseTime)
+        //    Time.timeScale = 0f;
     }
     protected void HidePanel(GameObject panel, bool resumeTime = false)
     {
         if (panel == null) return;
         panel.SetActive(false);
-        if (resumeTime)
-            Time.timeScale = 1f;
+        //if (resumeTime)
+        //    Time.timeScale = 1f;
     }
     protected void OnBtnExit(Button ExitBtn)
     {

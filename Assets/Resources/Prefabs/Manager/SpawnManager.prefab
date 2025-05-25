@@ -92,6 +92,6 @@ MonoBehaviour:
     m_Bits: 0
   hpBarPrefab: {fileID: 7227060064333231910, guid: da65f401c082d254d977ab80bd0eb464, type: 3}
   uiCanvas: {fileID: 0}
-  gradePopupPrefab: {fileID: 3433281537989639434, guid: 855faf4ed29d1b24aaa447c840072486, type: 3}
+  popupPrefab: {fileID: 3433281537989639434, guid: 855faf4ed29d1b24aaa447c840072486, type: 3}
   enemySpawnMinInterval: 10
   enemySpawnMaxInterval: 15

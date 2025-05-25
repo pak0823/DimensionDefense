@@ -91,6 +91,13 @@ public class Character : MonoBehaviour, IDamageable
             circle.radius = attackRange;
         }
     }
+    public void SetDefinition(CharacterDefinition def)
+    {
+        definition = def;
+        characterName = def.typeName;
+        definitionPrefab = def.prefab;
+        characterType = def.attackType;
+    }
 
     public void TakeDamage(int amount)
     {

@@ -1,10 +1,7 @@
 using UnityEngine;
 
 
-public enum AttackType { Melee, Range}
-public enum MeleeType { None ,Sword, Axe, Spear, DoubleShield, DoubleSword, DoubleAxe, SwordShield, SpearShield, AxeShield }
-public enum RangeType { None, Bow, FireBolt, LightningBolt, Boom, Heal, WindBreath}
-public enum Rating { Normal, Rare, Unique, Legendary}
+
 
 [CreateAssetMenu(menuName = "Definition/CharacterDefinition")]
 public class CharacterDefinition : ScriptableObject

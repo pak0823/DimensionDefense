@@ -27,7 +27,7 @@ public class UI_Ingame : UIManager
         });
         SetupButton(Menu_Btn, () => TogglePanel(Menu_Panel, pauseTime: true));
         SetupButton(Play_Btn, () => TogglePanel(Menu_Panel, pauseTime: true));
-        OnBtnExit(Exit_Btn);
+        SetupButton(Exit_Btn, () => Shared.SceneFlowManager.ChangeScene("TitleScene"));
         SetupOptionOpen(Option_Btn);
         SetupOptionClose(Save_Btn);
 

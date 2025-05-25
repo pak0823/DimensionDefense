@@ -37,8 +37,8 @@ public class UI_Result : UIManager
         // 결과 텍스트 설정
         if (Shared.Building != null)
         {
-            bool youLost = Shared.Building.isEnemy;
-            resultText.text = youLost ? "Your Lose!" : "Your Win!";
+            bool youLose = Shared.Building.isEnemy;
+            resultText.text = youLose ? "Your Lose!" : "Your Win!";
             playTimeText.text = $"PlayTime: {Shared.UI_Ingame.timer_Text.text}";
         }
         // 시간 정지

@@ -80,6 +80,7 @@
     <Compile Include="Assets\Resources\Scripts\Ingame\Character.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Building\BuildingStats.cs" />
     <Compile Include="Assets\Resources\Scripts\Common\GameManager.cs" />
+    <Compile Include="Assets\Resources\Scripts\Common\Enum.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Building\IDamageable.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Building\BuildingHpBar.cs" />
@@ -94,12 +95,14 @@
     <Compile Include="Assets\Resources\Scripts\UI\PlatformCanvasScaler.cs" />
     <Compile Include="Assets\SPUM\Script\Data\SpumTextureData.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Stats\CharacterStats.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\UI_Difficulty.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Enemy.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\CharacterSpawner.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\AudioSetting.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\PulsingScale.cs" />
     <Compile Include="Assets\SPUM\Script\Data\SpritePos.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\UI_Ingame.cs" />
+    <Compile Include="Assets\Resources\Scripts\Ingame\Attack\RoundWheel.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Attack\Buff.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\ObjectPool.cs" />
     <Compile Include="Assets\Resources\Scripts\Ingame\Attack\Range.cs" />
