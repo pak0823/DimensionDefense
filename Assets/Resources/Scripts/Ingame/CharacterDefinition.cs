@@ -1,8 +1,5 @@
 using UnityEngine;
 
-
-
-
 [CreateAssetMenu(menuName = "Definition/CharacterDefinition")]
 public class CharacterDefinition : ScriptableObject
 {
@@ -26,7 +23,6 @@ public class CharacterDefinition : ScriptableObject
 
     [Header("밸런스 프로필")]
     public Rating rating;   //이 캐릭터의 등급
-    public float spawnWeight;    //이 캐릭터가 소환될 확률 가중치
 
     [Header("Cost Settings")]
     public int defaultSpawnCost = 10;   //기본 소환 비용

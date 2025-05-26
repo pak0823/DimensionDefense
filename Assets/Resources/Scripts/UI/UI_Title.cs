@@ -11,9 +11,9 @@ public class UI_Title : UIManager
 
     private void Awake()
     {
-        SetupButton(Start_Btn, () => TogglePanel(difficulty_Panel, pauseTime: false));
-        SetupOptionOpen(Option_Btn);
-        SetupOptionClose(Save_Btn);
+        SetupButton(Start_Btn, () => { TogglePanel(difficulty_Panel, pauseTime: false); Shared.SoundManager.PlaySound("CommonBtn_SFX"); });
+        SetupOptionOpen(Option_Btn,()=> Shared.SoundManager.PlaySound("CommonBtn_SFX"));
+        SetupOptionClose(Save_Btn, () => Shared.SoundManager.PlaySound("CommonBtn_SFX"));
         OnBtnExit(Exit_Btn);
     }
 }

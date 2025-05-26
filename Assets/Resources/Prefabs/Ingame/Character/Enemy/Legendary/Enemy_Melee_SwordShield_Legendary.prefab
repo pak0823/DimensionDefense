@@ -4462,11 +4462,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1787967526307804485, guid: fdea5f42e2a830a4b863b5eb272a28c8, type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1787967526307804485, guid: fdea5f42e2a830a4b863b5eb272a28c8, type: 3}
       propertyPath: m_SortingLayerID
-      value: 0
+      value: -799515315
       objectReference: {fileID: 0}
     - target: {fileID: 3454475690562087588, guid: fdea5f42e2a830a4b863b5eb272a28c8, type: 3}
       propertyPath: m_LocalPosition.x

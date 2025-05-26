@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1787967526307804485}
   - component: {fileID: 5963103528386464294}
   - component: {fileID: 2955646799668453858}
+  - component: {fileID: 8989227434860887929}
   m_Layer: 0
   m_Name: RoundWheel
   m_TagString: Untagged
@@ -72,9 +73,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -37556193
-  m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingLayerID: -799515315
+  m_SortingLayer: 4
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: d14f439b538f75045a7d25b19e60104e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -142,3 +143,15 @@ CircleCollider2D:
   m_Offset: {x: -0.4, y: 1}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &8989227434860887929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4750049957721742727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7993db44b298e2d4a86ae786e512c308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

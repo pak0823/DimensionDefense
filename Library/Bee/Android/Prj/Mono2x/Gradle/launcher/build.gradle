@@ -5,7 +5,7 @@ dependencies {
     }
 
 android {
-    namespace "com.DefaultCompany.Project_B"
+    namespace "com.DefaultCompany.DimensionDefense"
     ndkPath "C:/Program Files/Unity/Hub/Editor/2022.3.60f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK"
 
     compileSdkVersion 35
@@ -19,7 +19,7 @@ android {
     defaultConfig {
         minSdkVersion 22
         targetSdkVersion 35
-        applicationId 'com.DefaultCompany.Project_B'
+        applicationId 'com.DefaultCompany.DimensionDefense'
         ndk {
             abiFilters 'armeabi-v7a'
         }

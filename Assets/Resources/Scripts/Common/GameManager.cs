@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
     public event Action OnGameRestart;
 
     // 난이도별 스탯·스폰 속도 보정 비율
-    public float[] DifficultyStatMultiplier = { 1f, 1.5f, 2f };    // Normal, Hard, Hell
-    public float[] DifficultySpawnRate = { 1f, 0.75f, 0.5f };  // 1초당 스폰 속도 조정, 낮을수록 빠르게
+    public float[] DifficultyStatMultiplier = { 1f, 1.2f, 1.5f };    // Normal, Hard, Hell
+    public float[] DifficultySpawnRate = { 1f, 0.8f, 0.6f };  // 1초당 스폰 속도 조정, 낮을수록 빠르게
 
 
     private void Awake()
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     public void SetDifficulty(Difficulty diff)  //난이도 설정 적용
     {
         CurrentDifficulty = diff;
-        Debug.Log($"난이도 변경: {diff}");
+        //Debug.Log($"난이도 변경: {diff}");
     }
 
     public void GameOver()  // 게임 오버
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(0.7f);  //0.7초마다 cost 1 증가
+            yield return new WaitForSeconds(0.7f);  //정해진 초마다 cost 1 증가
             AddCost(gainPerSec);
         }
     }

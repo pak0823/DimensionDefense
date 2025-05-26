@@ -40,6 +40,15 @@ public class SpawnManager : MonoBehaviour
     public float enemySpawnMaxInterval = 15f;   //스폰 간격 최대(초)
     private float enemySpawnTimer = 5f;
 
+
+    private readonly Dictionary<Rating, float> ratingWeights = new Dictionary<Rating, float>
+{
+    { Rating.Normal,    65f },   // 65%
+    { Rating.Rare,      25f },   // 25%
+    { Rating.Unique,      9f },   // 9%
+    { Rating.Legendary,  1f }    //  1%
+};
+
     private void Awake()
     {
         Shared.SpawnManager = this;
@@ -58,75 +67,91 @@ public class SpawnManager : MonoBehaviour
             EnemyRandomSpawn();
     }
 
-    CharacterDefinition GetRandomByWeight(List<CharacterDefinition> list)
+    // 등급 뽑기
+    // 허용된 등급만으로 등급 하나 뽑기
+    private Rating PickRating(IEnumerable<Rating> allowed)
     {
-        const float total = 100f;                              // ① 총합 100%
-        float r = Random.Range(0f, total);                     // ② 0~100 랜덤
+        // 실제 총합 계산
+        var filtered = ratingWeights
+            .Where(kv => allowed.Contains(kv.Key))
+            .ToList();
+        float total = filtered.Sum(kv => kv.Value);
+
+        float r = Random.Range(0f, total);
         float cum = 0f;
-
-        foreach (var def in list)
+        foreach (var kv in filtered)
         {
-            cum += def.spawnWeight;                            // spawnWeight를 퍼센트로 설정 (합=100)
-            if (r <= cum)
-                return def;                                    // 누적값 구간에 따라 반환
+            cum += kv.Value;
+            if (r <= cum) return kv.Key;
         }
+        return filtered.Last().Key;
+    }
 
-        // 혹시 누적이 100을 못 채우면 마지막
-        return list[list.Count - 1];
+    // 3) 그 등급 안에서 Definition 하나 뽑기
+    private CharacterDefinition PickDefinitionByRating(
+        List<CharacterDefinition> list, Rating rating)
+    {
+        var defs = list.Where(d => d.rating == rating).ToList();
+        if (defs.Count == 0) return null;
+        return defs[Random.Range(0, defs.Count)];
     }
 
 
     public void PlayerDefaultSpawn()
     {
-        if(totalSpawnTimer <= 0)
-        {
-            // 1) 랜덤 정의 뽑기 (모든 등급)
-            var def = GetRandomByWeight(player_Definitions);
-
-            // 2) 비용 차감
-            if (!Shared.GameManager.TrySpendCost(def.defaultSpawnCost))
-            {
-                ShowWarningPopup(0);
-                return;
-            }
-                
-            // 3) 실제 소환
-            SpawnPlayer(def, playerSpawnPoint.position);
-
-            totalSpawnTimer = playerSpawnTimer;
-        }
-        else
+        if (totalSpawnTimer > 0)
         {
             ShowWarningPopup(1);
+            return;
         }
+
+        // 1) 허용할 등급 목록: 모두( Normal, Rare, Unique, Legendary )
+        var allowedRatings = ratingWeights.Keys;
+
+        // 2) 2단계 선택
+        var pickRating = PickRating(allowedRatings);                           // 등급 가중치 뽑기
+        var def = PickDefinitionByRating(player_Definitions, pickRating); // 그 등급 Definition 중 랜덤
+
+        if (def == null)
+            return;
+
+        // 3) 비용 차감
+        if (!Shared.GameManager.TrySpendCost(def.defaultSpawnCost))
+        {
+            ShowWarningPopup(0);
+            return;
+        }
+
+        // 4) 실제 소환
+        SpawnPlayer(def, playerSpawnPoint.position);
+
+        totalSpawnTimer = playerSpawnTimer;
     }
     public void PlayerSpecialSpawn()
     {
-        if (totalSpawnTimer <= 0)
-        {
-            // 1) 레어 이상만 필터
-            var special = player_Definitions
-                .Where(d => d.rating != Rating.Normal && d.rating != Rating.Rare)
-                .ToList();
-            if (special.Count == 0) return;
-
-            // 2) 랜덤 정의 뽑기
-            var def = GetRandomByWeight(special);
-
-            // 3) 비용 차감
-            if (!Shared.GameManager.TrySpendCost(def.defaultSpawnCost))
-            {
-                ShowWarningPopup(0);
-                return;
-            }
-
-            // 4) 실제 소환
-            SpawnPlayer(def, playerSpawnPoint.position);
-        }
-        else
+        if (totalSpawnTimer > 0)
         {
             ShowWarningPopup(1);
+            return;
         }
+
+        // “Unique와 Legendary만” 허용
+        var allowed = new[] { Rating.Unique, Rating.Legendary };
+
+        // 1) 비용 차감 전: 뽑은 등급과 정의
+        Rating pickRating = PickRating(allowed);
+        var def = PickDefinitionByRating(player_Definitions, pickRating);
+        if (def == null) return;
+
+        // 2) 비용 체크
+        if (!Shared.GameManager.TrySpendCost(def.specialSpawnCost))
+        {
+            ShowWarningPopup(0);
+            return;
+        }
+
+        // 3) 실제 소환
+        SpawnPlayer(def, playerSpawnPoint.position);
     }
     private void SpawnPlayer(CharacterDefinition def, Vector3 pos)
     {
@@ -155,7 +180,14 @@ public class SpawnManager : MonoBehaviour
     void EnemyRandomSpawn()
     {
         // 1) 랜덤 정의 뽑기
-        var def = GetRandomByWeight(enemy_Definitions);
+        var allowedRatings = ratingWeights.Keys;
+
+        // 2) 2단계 선택
+        var pickRating = PickRating(allowedRatings);                           // 등급 가중치 뽑기
+        var def = PickDefinitionByRating(enemy_Definitions, pickRating); // 그 등급 Definition 중 랜덤
+
+        if (def == null)
+            return;
 
         // 2) 난이도 보정된 스탯으로 스폰
         SpawnEnemy(def, enemySpawnPoint.position);
@@ -205,27 +237,24 @@ public class SpawnManager : MonoBehaviour
         float chargeTime = baseCharge * rate;
 
         enemySpawnMinInterval = chargeTime * 0.5f;
-        enemySpawnMaxInterval = chargeTime * 1.5f;
+        enemySpawnMaxInterval = chargeTime * 1.2f;
 
         enemySpawnTimer = Random.Range(enemySpawnMinInterval, enemySpawnMaxInterval);
     }
 
-    
 
     public void TestSpawn() //테스트용
     {
-        // 1) 레어 이상만 필터
-        var special = player_Definitions
-            .Where(d => d.rating == Rating.Legendary)
-            .ToList();
-        if (special.Count == 0) return;
+        var allowed = new[] {Rating.Legendary};
+        Rating pickRating = PickRating(allowed);
+        //var def = PickDefinitionByRating(player_Definitions, pickRating);
+        var def = PickDefinitionByRating(enemy_Definitions, pickRating);
+        if (def == null) return;
 
-        // 2) 랜덤 정의 뽑기
-        var def = GetRandomByWeight(special);
-
-        // 4) 실제 소환
-        SpawnPlayer(def, playerSpawnPoint.position);
+        SpawnPlayer(def, enemySpawnPoint.position);
+        //SpawnPlayer(def, playerSpawnPoint.position);
     }
+
 
     private void ShowGradePopup(Rating _rating, Vector3 _worldPos)
     {

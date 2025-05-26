@@ -7,6 +7,7 @@ public class UI_Difficulty : MonoBehaviour
     public Button normalBtn;
     public Button hardBtn;
     public Button hellBtn;
+    public Button cancelBtn;
 
     [Header("Button Highlight Colors")]
     public Color selectedColor = Color.yellow;
@@ -18,6 +19,7 @@ public class UI_Difficulty : MonoBehaviour
         normalBtn.onClick.AddListener(() => OnSelect(Difficulty.Normal));
         hardBtn.onClick.AddListener(() => OnSelect(Difficulty.Hard));
         hellBtn.onClick.AddListener(() => OnSelect(Difficulty.Hell));
+        cancelBtn.onClick.AddListener(() => this.gameObject.SetActive(false));
 
         // 초기 하이라이트
         //UpdateHighlight(Shared.GameManager.CurrentDifficulty);

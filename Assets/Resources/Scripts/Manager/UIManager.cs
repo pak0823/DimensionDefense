@@ -8,24 +8,26 @@ public abstract class UIManager : MonoBehaviour
     public GameObject optionWindow;
 
     //옵션창 열기
-    protected void SetupOptionOpen(Button openBtn)
+    protected void SetupOptionOpen(Button openBtn, UnityAction action)
     {
         if (openBtn == null || optionWindow == null) return;
         openBtn.onClick.RemoveAllListeners();
         openBtn.onClick.AddListener(() =>
         {
             ShowPanel(optionWindow, pauseTime: true);
+            action?.Invoke();
         });
     }
 
     //옵션창 닫기
-    protected void SetupOptionClose(Button closeBtn)
+    protected void SetupOptionClose(Button closeBtn, UnityAction action)
     {
         if (closeBtn == null || optionWindow == null) return;
         closeBtn.onClick.RemoveAllListeners();
         closeBtn.onClick.AddListener(() =>
         {
             HidePanel(optionWindow, resumeTime: true);
+            action?.Invoke();
         });
     }
 
@@ -49,15 +51,11 @@ public abstract class UIManager : MonoBehaviour
     {
         if (panel == null) return;
         panel.SetActive(true);
-        //if (pauseTime)
-        //    Time.timeScale = 0f;
     }
     protected void HidePanel(GameObject panel, bool resumeTime = false)
     {
         if (panel == null) return;
         panel.SetActive(false);
-        //if (resumeTime)
-        //    Time.timeScale = 1f;
     }
     protected void OnBtnExit(Button ExitBtn)
     {

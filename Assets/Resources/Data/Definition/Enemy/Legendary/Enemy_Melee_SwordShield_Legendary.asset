@@ -19,7 +19,6 @@ MonoBehaviour:
   meleeType: 7
   rangeType: 0
   rating: 3
-  spawnWeight: 5
   defaultSpawnCost: 10
   specialSpawnCost: 30
   attackStrategy: {fileID: 11400000, guid: ce05691a5d90b6d498e660e437d925b5, type: 2}

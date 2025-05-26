@@ -59,7 +59,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Hit_SFX
     clip: {fileID: 8300000, guid: 504a1d44c25a30b41923c08cef02cc3e, type: 3}
-    volume: 0.1
+    volume: 0.05
     loop: 0
     category: 1
     source: {fileID: 0}
@@ -114,6 +114,18 @@ MonoBehaviour:
   - name: WindBreath_SFX
     clip: {fileID: 8300000, guid: 62e5377b3906f35498413e70b0804e15, type: 3}
     volume: 0.05
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: CommonBtn_SFX
+    clip: {fileID: 8300000, guid: 747aeb5a550a5594198169d293536298, type: 3}
+    volume: 0.258
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: BuildingHit_SFX
+    clip: {fileID: 8300000, guid: 1ac0046e1a601194abf67bace824e456, type: 3}
+    volume: 0.1
     loop: 0
     category: 1
     source: {fileID: 0}

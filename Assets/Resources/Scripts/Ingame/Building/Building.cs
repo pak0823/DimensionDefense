@@ -22,6 +22,7 @@ public class Building : MonoBehaviour, IDamageable
 
         currentHp -= amount;
         OnHpChanged?.Invoke(currentHp);
+        Shared.SoundManager.PlaySound("BuildingHit_SFX");
 
         if (currentHp <= 0)
         {

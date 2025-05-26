@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.DefaultCompany.Project_B.launcher-mergeReleaseResources-3:/values-v21/values-v21.xml",
+            "outputFile": "com.DefaultCompany.DimensionDefense.launcher-mergeReleaseResources-3:/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ziwoo\\Documents\\GitHub\\Project_B\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\unityLibrary\\build\\intermediates\\packaged_res\\release\\values-v21\\values-v21.xml",

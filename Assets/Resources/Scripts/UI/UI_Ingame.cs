@@ -25,11 +25,11 @@ public class UI_Ingame : UIManager
             Shared.SpawnManager.PlayerSpecialSpawn();
             UpdateCostUI();
         });
-        SetupButton(Menu_Btn, () => TogglePanel(Menu_Panel, pauseTime: true));
-        SetupButton(Play_Btn, () => TogglePanel(Menu_Panel, pauseTime: true));
+        SetupButton(Menu_Btn, () => { Shared.SoundManager.PlaySound("SpawnBtn_SFX"); TogglePanel(Menu_Panel, pauseTime: true); });
+        SetupButton(Play_Btn, () => { Shared.SoundManager.PlaySound("SpawnBtn_SFX"); TogglePanel(Menu_Panel, pauseTime: true); });
         SetupButton(Exit_Btn, () => Shared.SceneFlowManager.ChangeScene("TitleScene"));
-        SetupOptionOpen(Option_Btn);
-        SetupOptionClose(Save_Btn);
+        SetupOptionOpen(Option_Btn, () => Shared.SoundManager.PlaySound("SpawnBtn_SFX"));
+        SetupOptionClose(Save_Btn, () => Shared.SoundManager.PlaySound("SpawnBtn_SFX"));
 
         timer_Text.text = "00:00";
         UpdateCostUI();
