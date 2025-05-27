@@ -48,6 +48,7 @@ public class SceneFlowManager : MonoBehaviour
                 break;
             case "IngameScene":
                 StartCoroutine(FadeIn(1f));
+                Shared.GameManager.ResetGameState();
                 Shared.SoundManager.PlaySound("InGame_BGM");
                 break;
         }
@@ -79,10 +80,7 @@ public class SceneFlowManager : MonoBehaviour
         fadeCanvasGroup.alpha = 1f;
     }
 
-    /// <summary>
-    /// 씬 전환 요청 메서드
-    /// SceneManager.LoadScene를 직접 호출하지 않고 이 메서드 쓰기
-    /// </summary>
+    // 씬 전환 요청 메서드
     public void ChangeScene(string _sceneName)
     {
         Time.timeScale = 1;

@@ -145,6 +145,9 @@ ScriptsOnlyBuild:
     fullTypeName: UIManager
     methodName: ShowPanel
   - assembly: Assembly-CSharp
+    fullTypeName: UI_Ingame
+    methodName: SetTimeScale
+  - assembly: Assembly-CSharp
     fullTypeName: UIManager
     methodName: OnBtnExit
   - assembly: Assembly-CSharp
@@ -626,7 +629,7 @@ ScriptsOnlyBuild:
     className: CharacterStats
   - hash:
       serializedVersion: 2
-      Hash: fb5213450fd0dd7af5c7ce5762b89883
+      Hash: c85a2f52dd23842dadf5e8a2e30c0d83
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager
@@ -968,7 +971,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
-      Hash: 56f2a6684b12a58dfba39b16f9b02452
+      Hash: 41fb03212a95e31386ba08e69ba6d053
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: UI_Ingame
@@ -980,7 +983,7 @@ ScriptsOnlyBuild:
     className: SpriteResolver
   - hash:
       serializedVersion: 2
-      Hash: a0acaa399ffbb0f11504b7e820625a56
+      Hash: 1a4602ebfef1742c7d3773ea3eb37eec
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: UI_Result

@@ -8,7 +8,9 @@ public class UI_Ingame : UIManager
     [Header("Panel & Window")]
     public GameObject Menu_Panel;
     [Header("Text")]
-    public Text timer_Text, cost_Text;
+    public Text timer_Text, cost_Text, timeScale_Text;
+
+    int timeScale = 1;
 
     private void Awake()
     {
@@ -54,5 +56,15 @@ public class UI_Ingame : UIManager
     public void TestSpawn()
     {
         Shared.SpawnManager.TestSpawn();
+    }
+
+    
+    public void SetTimeScale()
+    {
+        if (timeScale > 1)
+            timeScale = 0;
+
+        Shared.GameManager.SetGameSpeed(++timeScale);
+        timeScale_Text.text = $"X{timeScale}";
     }
 }

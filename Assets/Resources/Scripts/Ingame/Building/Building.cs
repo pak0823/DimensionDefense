@@ -40,9 +40,8 @@ public class Building : MonoBehaviour, IDamageable
     }
     private void DestroyBuilding()
     {
-        Debug.Log("±âÁö ÆÄ±«");
+        Shared.UI_Result.destroyBuilding = this.isEnemy;
         Shared.GameManager.GameOver();
         Destroy(gameObject);
-
     }
 }

@@ -8,9 +8,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [Header("Cost Settings")]
-    public int currentCost = 0;
+    public int StartCost = 0;
+    public int currentCost { get; private set; }
     public int maxCost = 500;
     public int gainPerSec = 1;
+    private int slaveCost = 2;
 
     public Difficulty CurrentDifficulty { get; private set; } = Difficulty.Normal;
 
@@ -44,7 +46,11 @@ public class GameManager : MonoBehaviour
     public void SetDifficulty(Difficulty diff)  //난이도 설정 적용
     {
         CurrentDifficulty = diff;
-        //Debug.Log($"난이도 변경: {diff}");
+    }
+    public void ResetGameState()
+    {
+        currentCost = StartCost;
+        Shared.UI_Ingame.UpdateCostUI();
     }
 
     public void GameOver()  // 게임 오버
@@ -54,7 +60,6 @@ public class GameManager : MonoBehaviour
 
         // 시간 정지는 UI_Result.cs에서 실행
         OnGameOver?.Invoke();
-        Debug.Log("게임 끝");
     }
 
     
@@ -66,6 +71,9 @@ public class GameManager : MonoBehaviour
         // 시간 재개
         Time.timeScale = 1f;
         OnGameRestart?.Invoke();
+
+        //게임 상태 초기화
+        ResetGameState();
 
         // 씬 리로드 (현재 씬)
         var sceneName = SceneManager.GetActiveScene().name;
@@ -79,6 +87,17 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.7f);  //정해진 초마다 cost 1 증가
             AddCost(gainPerSec);
         }
+    }
+
+    public void EnemySlaveCostGain()
+    {
+        Debug.Log($"currentCost:{currentCost} -> afterCost: {currentCost + slaveCost}");
+        currentCost += slaveCost;
+    }
+
+    public void SetGameSpeed(float _speed)
+    {
+        Time.timeScale = _speed;
     }
 
     public void AddCost(int amount)

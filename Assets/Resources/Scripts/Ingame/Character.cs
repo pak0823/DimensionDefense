@@ -131,6 +131,11 @@ public class Character : MonoBehaviour, IDamageable
 
         animator.SetTrigger("Death");
 
+        if(definition.isEnemy)
+        {
+            Shared.GameManager.EnemySlaveCostGain();
+        }
+
         yield return new WaitForSeconds(0.2f);
 
         // 기본 사망 처리 (비활성화, 풀 반환 등)

@@ -20,9 +20,6 @@ public class UI_Difficulty : MonoBehaviour
         hardBtn.onClick.AddListener(() => OnSelect(Difficulty.Hard));
         hellBtn.onClick.AddListener(() => OnSelect(Difficulty.Hell));
         cancelBtn.onClick.AddListener(() => this.gameObject.SetActive(false));
-
-        // 초기 하이라이트
-        //UpdateHighlight(Shared.GameManager.CurrentDifficulty);
     }
 
     private void OnSelect(Difficulty diff)

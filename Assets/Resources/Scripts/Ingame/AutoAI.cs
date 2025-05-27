@@ -133,7 +133,6 @@ public class AutoAI : MonoBehaviour
         {
             detectedTargets.Remove(other.transform);
             detectedBuffTargets.Remove(other.transform);
-            //Debug.Log("리스트에서 삭제: " + other.name);
         }
     }
 
