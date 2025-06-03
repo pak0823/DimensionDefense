@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5267949679769950463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7158416921615252186}
+  - component: {fileID: 8226277152581083174}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7158416921615252186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5267949679769950463}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8226277152581083174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5267949679769950463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51daaf72e7b4064d82e0b5551ec3970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_Definitions:
+  - {fileID: 11400000, guid: 341be0df96661fc41b65bf3b8a0ed78b, type: 2}
+  - {fileID: 11400000, guid: bb808cd68d304db4585fb168cac3a73c, type: 2}
+  - {fileID: 11400000, guid: a09b688233e9e7c479ffce5c11e4d4a7, type: 2}
+  - {fileID: 11400000, guid: b6f02b9382ca1ac42a344d0c5ddcee4d, type: 2}
+  - {fileID: 11400000, guid: fe2d3902ff5b45c4bb18571d91dbf208, type: 2}
+  - {fileID: 11400000, guid: 16dee19b6f74fa14aa332101667da706, type: 2}
+  - {fileID: 11400000, guid: 76c9d18802204a14c944c9bbb0ceef49, type: 2}
+  - {fileID: 11400000, guid: aee9f44498cb9934a9b88750a9116a53, type: 2}
+  - {fileID: 11400000, guid: e9f1ff187d28a1d4da607359304e1a88, type: 2}
+  - {fileID: 11400000, guid: 4db1c08fb5ac4a04db0519eedf60a74c, type: 2}
+  - {fileID: 11400000, guid: c162c5bc24ea96348badf10afdde5a3e, type: 2}
+  - {fileID: 11400000, guid: f482f2dba024a70449b748ab509e520c, type: 2}
+  - {fileID: 11400000, guid: d09e8bb7ecdf9e2479225c5b022e99fb, type: 2}
+  - {fileID: 11400000, guid: 12b101dc625ce3f4cacf8a6cb28691f6, type: 2}
+  - {fileID: 11400000, guid: f107b6575ed95a44eaa8d9d616ec13fc, type: 2}
+  - {fileID: 11400000, guid: 9dfcde1506144e94ab5debbb76719a70, type: 2}
+  - {fileID: 11400000, guid: 4b232bf6d8dea624fac227a818420885, type: 2}
+  - {fileID: 11400000, guid: 147e9a195ae07cd4ea8d63f53a2f8934, type: 2}
+  enemy_Definitions:
+  - {fileID: 11400000, guid: ea3984c4c6da10b478fd0867a5e73bb2, type: 2}
+  - {fileID: 11400000, guid: 2cd108093c64d2a4493b02950be713d3, type: 2}
+  - {fileID: 11400000, guid: f5df5b5ced67d6c49bb51785c3641822, type: 2}
+  - {fileID: 11400000, guid: 64e408e1924948a49a5d4f7be6489ed7, type: 2}
+  - {fileID: 11400000, guid: 0fd29e6cba64891409eed74e205b99d7, type: 2}
+  - {fileID: 11400000, guid: 1c24ef7a4b6196b41a8b7686dc4cda01, type: 2}
+  - {fileID: 11400000, guid: c05c6a8d4d363b64bb4d696eb10f9701, type: 2}
+  - {fileID: 11400000, guid: b56915655b2f3824fb0a3483d7190b87, type: 2}
+  - {fileID: 11400000, guid: f0bdf2a0a7bf14e4c9d8830ea56e1331, type: 2}
+  - {fileID: 11400000, guid: 151434cbb6b734341898e75619185f75, type: 2}
+  - {fileID: 11400000, guid: f2fd0e2326a16464ebe2ada0ad36ae9b, type: 2}
+  - {fileID: 11400000, guid: 96ae6f4514ff96b4d8ef0f14d9d37060, type: 2}
+  - {fileID: 11400000, guid: 88245f7eb02c8d84898b68c6c09a8d8e, type: 2}
+  - {fileID: 11400000, guid: a746c84d36f778649ad9cfbd09d14d95, type: 2}
+  - {fileID: 11400000, guid: 38995f2b96e25e24facf88c8ea1da782, type: 2}
+  - {fileID: 11400000, guid: 68efc0da985879341a9cbf5e9ab5d4cf, type: 2}
+  - {fileID: 11400000, guid: a2aaef2e18c930f4c925fd49c8896879, type: 2}
+  - {fileID: 11400000, guid: 945a1938bfef63d44b693693602dae37, type: 2}
+  - {fileID: 11400000, guid: 0a878b8ee8d3ff24b99c72cf2d1e5092, type: 2}
+  - {fileID: 11400000, guid: 1381ce8e2c3f3034399487a93d3fc821, type: 2}
+  playerSpawnPoint: {fileID: 0}
+  enemySpawnPoint: {fileID: 0}
+  totalSpawnTimer: 0
+  detectionMask:
+    serializedVersion: 2
+    m_Bits: 0
+  hpBarPrefab: {fileID: 7227060064333231910, guid: da65f401c082d254d977ab80bd0eb464, type: 3}
+  uiCanvas: {fileID: 0}
+  popupPrefab: {fileID: 3433281537989639434, guid: 855faf4ed29d1b24aaa447c840072486, type: 3}
+  enemySpawnMinInterval: 10
+  enemySpawnMaxInterval: 15

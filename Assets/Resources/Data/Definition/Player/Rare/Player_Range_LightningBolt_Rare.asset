@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320062174e844a348a612b48f7b3928f, type: 3}
+  m_Name: Player_Range_LightningBolt_Rare
+  m_EditorClassIdentifier: 
+  typeName: LightningBolt_Rare
+  prefab: {fileID: 7149208551058607029, guid: 8e5c0f9a2756b4bd68bea643e5f2e029, type: 3}
+  isEnemy: 0
+  attackType: 1
+  meleeType: 0
+  rangeType: 3
+  rating: 1
+  spawnWeight: 30
+  defaultSpawnCost: 10
+  specialSpawnCost: 30
+  attackStrategy: {fileID: 11400000, guid: 292dddad520691a41a178165e48beade, type: 2}
+  subAttackStrategy: {fileID: 0}
+  detectionMask:
+    serializedVersion: 2
+    m_Bits: 64
+  rareMultiplier: 1.2
+  uniqueMultiplier: 1.5
+  legendaryMultiplier: 2
+  statsMeleeSword: {fileID: 0}
+  statsMeleeDoubleShield: {fileID: 0}
+  statsMeleeDoubleSword: {fileID: 0}
+  statsMeleeAxe: {fileID: 0}
+  statsMeleeDoubleAxe: {fileID: 0}
+  statsMeleeSwordShield: {fileID: 0}
+  statsMeleeSpearShield: {fileID: 0}
+  statsMeleeAxeShield: {fileID: 0}
+  statsMeleeSpear: {fileID: 0}
+  statsRangeBow: {fileID: 0}
+  statsRangeFireBolt: {fileID: 0}
+  statsRangeLightningBolt: {fileID: 11400000, guid: f701fc7782a9b52459f9e4423680074e, type: 2}
+  statsRangeBoom: {fileID: 0}
+  statsRangeHeal: {fileID: 0}
+  statsRangeBuffer: {fileID: 0}

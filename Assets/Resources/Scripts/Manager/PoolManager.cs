@@ -54,8 +54,8 @@ public class PoolManager : MonoBehaviour
             if (prefab == null) continue;
 
             // Character 컴포넌트가 있는 프리팹만 풀 생성
-            var character = prefab.GetComponent<Character>();
-            if (character != null && !characterPoolDict.ContainsKey(prefab))
+            var comp = prefab.GetComponent<Character>();
+            if (comp != null && !characterPoolDict.ContainsKey(prefab))
             {
                 // 풀링 인스턴스이 배치될 부모 컨테이너 결정
                 Transform parent = def.isEnemy ? enemyPoolContainer : playerPoolContainer;
@@ -66,7 +66,7 @@ public class PoolManager : MonoBehaviour
                 }
 
                 // 해당 컨테이너를 부모로 풀 생성
-                var pool = new ObjectPool<Character>(character, characterPoolSize, parent);
+                var pool = new ObjectPool<Character>(comp, characterPoolSize, parent);
                 characterPoolDict.Add(prefab, pool);
             }
         }

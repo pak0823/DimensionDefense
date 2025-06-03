@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
     public event Action OnGameRestart;
 
     // 난이도별 스탯·스폰 속도 보정 비율
-    public float[] DifficultyStatMultiplier = { 1f, 1.5f, 1.8f };    // Normal, Hard, Hell
-    public float[] DifficultySpawnRate = { 1f, 0.7f, 0.5f };  // 1초당 스폰 속도 조정, 낮을수록 빠르게
+    public float[] DifficultyStatMultiplier = { 1f, 1.2f, 1.5f };    // Normal, Hard, Hell
+    public float[] DifficultySpawnRate = { 1f, 0.8f, 0.6f };  // 1초당 스폰 속도 조정, 낮을수록 빠르게
 
 
     private void Awake()

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320062174e844a348a612b48f7b3928f, type: 3}
+  m_Name: Player_Melee_SwordShield_Legendary
+  m_EditorClassIdentifier: 
+  typeName: SwordShield_Legendary
+  prefab: {fileID: 205380808543776369, guid: e03c0b26bc7ff41e89f4709a00b89df7, type: 3}
+  isEnemy: 0
+  attackType: 0
+  meleeType: 7
+  rangeType: 0
+  rating: 3
+  spawnWeight: 5
+  defaultSpawnCost: 10
+  specialSpawnCost: 30
+  attackStrategy: {fileID: 11400000, guid: ce05691a5d90b6d498e660e437d925b5, type: 2}
+  subAttackStrategy: {fileID: 11400000, guid: be8806d113b1395439466defa9b44e3d, type: 2}
+  detectionMask:
+    serializedVersion: 2
+    m_Bits: 64
+  rareMultiplier: 1.2
+  uniqueMultiplier: 2
+  legendaryMultiplier: 3
+  statsMeleeSword: {fileID: 0}
+  statsMeleeDoubleShield: {fileID: 0}
+  statsMeleeDoubleSword: {fileID: 0}
+  statsMeleeAxe: {fileID: 0}
+  statsMeleeDoubleAxe: {fileID: 0}
+  statsMeleeSwordShield: {fileID: 11400000, guid: afe4982db738a0f4697e1c82529ebcf8, type: 2}
+  statsMeleeSpearShield: {fileID: 0}
+  statsMeleeAxeShield: {fileID: 0}
+  statsMeleeSpear: {fileID: 0}
+  statsRangeBow: {fileID: 0}
+  statsRangeFireBolt: {fileID: 0}
+  statsRangeLightningBolt: {fileID: 0}
+  statsRangeBoom: {fileID: 0}
+  statsRangeHeal: {fileID: 0}
+  statsRangeBuffer: {fileID: 0}

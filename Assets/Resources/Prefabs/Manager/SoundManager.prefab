@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5980772599053587256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3412425571463791075}
+  - component: {fileID: 1448521080559176919}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3412425571463791075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5980772599053587256}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1448521080559176919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5980772599053587256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc444586cde4ec4594c49f7401f390b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Title_BGM
+    clip: {fileID: 8300000, guid: a32f1caa66ca5254897081263338bf91, type: 3}
+    volume: 0.05
+    loop: 1
+    category: 0
+    source: {fileID: 0}
+  - name: InGame_BGM
+    clip: {fileID: 8300000, guid: e42bfe38f3d8f10418320a38ec88e685, type: 3}
+    volume: 0.05
+    loop: 1
+    category: 0
+    source: {fileID: 0}
+  - name: Hit_SFX
+    clip: {fileID: 8300000, guid: 504a1d44c25a30b41923c08cef02cc3e, type: 3}
+    volume: 0.05
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: FireBolt_SFX
+    clip: {fileID: 8300000, guid: bcfee9a8c2bee8c4584c072820252e01, type: 3}
+    volume: 0.05
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: Arrow_SFX
+    clip: {fileID: 8300000, guid: 010af1708bd6d40439ed9d899b3b6769, type: 3}
+    volume: 1
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: SpawnBtn_SFX
+    clip: {fileID: 8300000, guid: b2bc62c76ce861647a73e7d5d78c5dea, type: 3}
+    volume: 1
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: TitleBtn_SFX
+    clip: {fileID: 8300000, guid: f9ecd002b3a9d6345a7ccefe5850bdef, type: 3}
+    volume: 1
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: Heal_SFX
+    clip: {fileID: 8300000, guid: d2e41e802b0b5a349b30a3c09db1d3e5, type: 3}
+    volume: 0.05
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: Boom_SFX
+    clip: {fileID: 8300000, guid: 13dcc65cb0416704cac8382066da1bdb, type: 3}
+    volume: 0.1
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: Lightning_SFX
+    clip: {fileID: 8300000, guid: 6038890e8a07d494499f8e3e9a7b305e, type: 3}
+    volume: 0.1
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: HolyArrow_SFX
+    clip: {fileID: 8300000, guid: 484962b6299d1af478555716e10c161b, type: 3}
+    volume: 0.1
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: WindBreath_SFX
+    clip: {fileID: 8300000, guid: 62e5377b3906f35498413e70b0804e15, type: 3}
+    volume: 0.05
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: CommonBtn_SFX
+    clip: {fileID: 8300000, guid: 747aeb5a550a5594198169d293536298, type: 3}
+    volume: 0.258
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  - name: BuildingHit_SFX
+    clip: {fileID: 8300000, guid: 1ac0046e1a601194abf67bace824e456, type: 3}
+    volume: 0.1
+    loop: 0
+    category: 1
+    source: {fileID: 0}
+  BGMMasterVolume: 1
+  SFXMasterVolume: 1

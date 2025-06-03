@@ -13,7 +13,7 @@ public class PlatformCanvasScaler : MonoBehaviour
 
 #if UNITY_IOS || UNITY_ANDROID
             scaler.referenceResolution = new Vector2(1280, 720);
-            scaler.matchWidthOrHeight = 1.0f;
+            scaler.matchWidthOrHeight = 0f;
 #else
         scaler.referenceResolution = new Vector2(1920, 1080);
         scaler.matchWidthOrHeight = 0.5f;
